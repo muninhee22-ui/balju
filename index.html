@@ -22,6 +22,11 @@
   body{font-family:"Malgun Gothic","맑은 고딕",-apple-system,sans-serif;background:#eef0f3;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:14px;}
   .wrap{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.07);}
   .hdimg{display:block;width:100%;height:auto;}
+  .hdwrap{position:relative;line-height:0;}
+  .hddate{position:absolute;top:50%;right:4.5%;transform:translateY(-50%);text-align:right;line-height:1.25;}
+  .hddate .ck{display:flex;align-items:center;justify-content:flex-end;gap:4px;font-size:clamp(8px,1.9vw,11.5px);color:#7fd6a3;font-weight:700;}
+  .hddate .ck i{font-size:clamp(10px,2.2vw,14px);}
+  .hddate .dt{display:block;font-size:clamp(10px,2.6vw,15px);color:#fff;font-weight:700;margin-top:2px;letter-spacing:.5px;}
   .hd{background:var(--navy);padding:18px 20px;}
   .hd .row{display:flex;align-items:center;gap:12px;}
   .hd .ico{width:42px;height:42px;background:var(--navy2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;flex-shrink:0;}
@@ -99,7 +104,10 @@
 <body>
 <div class="wrap">
 
-  <img class="hdimg" src="header.png" alt="VILLA DE GD · 조리부 통합 발주 시스템 · 5개 지점">
+  <div class="hdwrap">
+    <img class="hdimg" src="header.png" alt="VILLA DE GD · 조리부 통합 발주 시스템 · 5개 지점">
+    <div class="hddate"><span class="ck"><i class="ti ti-circle-check-filled"></i> 최신 갱신</span><span class="dt">6 / 20 (토)</span></div>
+  </div>
 
 
   <div class="alert"><i class="ti ti-refresh"></i><div class="tx">받기 전에 꼭 「새로고침」하세요!<small>PC: Ctrl+Shift+R 누르기 · 휴대폰: 탭 닫고 다시 열기 — 항상 최신 발주서 확인</small></div></div>
