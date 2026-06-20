@@ -21,6 +21,7 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:"Malgun Gothic","맑은 고딕",-apple-system,sans-serif;background:#eef0f3;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:14px;}
   .wrap{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.07);}
+  .hdimg{display:block;width:100%;height:auto;}
   .hd{background:var(--navy);padding:18px 20px;}
   .hd .row{display:flex;align-items:center;gap:12px;}
   .hd .ico{width:42px;height:42px;background:var(--navy2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;flex-shrink:0;}
@@ -98,20 +99,8 @@
 <body>
 <div class="wrap">
 
-  <div class="hd">
-    <div class="row">
-      <div class="brand">
-        <svg class="fl" width="62" height="9" viewBox="0 0 62 9" fill="none" stroke="#b5903f" stroke-width=".9" stroke-linecap="round"><path d="M3 5 Q16 5.5 25 3.2 Q29 1.5 31 4.4 Q33 1.5 37 3.2 Q46 5.5 59 5"/><circle cx="31" cy="4.4" r="1.5" fill="#b5903f" stroke="none"/></svg>
-        <div class="wm">VILLA <span class="de">DE</span> GD</div>
-        <div class="sub">조리부 발주서 · 5개 지점</div>
-      </div>
-      <div class="upd">
-        <div class="t"><i class="ti ti-circle-check-filled"></i> 최신 갱신</div>
-        <div class="d">6 / 20 (토)</div>
-      </div>
-    </div>
-    <div class="bar"></div>
-  </div>
+  <img class="hdimg" src="header.png" alt="VILLA DE GD · 조리부 통합 발주 시스템 · 5개 지점">
+
 
   <div class="alert"><i class="ti ti-refresh"></i><div class="tx">받기 전에 꼭 「새로고침」하세요!<small>PC: Ctrl+Shift+R 누르기 · 휴대폰: 탭 닫고 다시 열기 — 항상 최신 발주서 확인</small></div></div>
 
