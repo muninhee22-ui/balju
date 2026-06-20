@@ -54,7 +54,10 @@
   .pill{font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
   .pill.new{background:#d8efdf;color:#1f6e42;} .pill.chg{background:#fbe7c6;color:#8a6a14;}
   .branches{padding:14px 16px 18px;}
-  .branches .bt{font-size:13px;font-weight:700;margin:2px 2px 10px;}
+  .branches .bt{font-size:13px;font-weight:700;margin:2px 2px 8px;}
+  .tip{font-size:12px;color:#7a8390;background:#f4f6f9;border:1px solid #e4e8ee;border-radius:9px;padding:8px 12px;margin:0 2px 12px;display:flex;align-items:center;gap:8px;line-height:1.4;}
+  .tip i{font-size:17px;color:#3a76d8;flex-shrink:0;}
+  .tip b{color:#3a4150;font-weight:700;}
   .bc{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden;text-decoration:none;color:inherit;transition:.12s;}
   .bc:active{transform:scale(.99);} .bc:hover{border-color:#cdd3dc;box-shadow:0 2px 10px rgba(0,0,0,.05);}
   .bc .name{width:80px;align-self:stretch;display:flex;align-items:center;justify-content:center;padding:16px 4px;font-size:15px;font-weight:700;color:#fff;text-align:center;flex-shrink:0;}
@@ -127,6 +130,7 @@
 
   <div class="branches">
     <div class="bt">지점별 발주서 — 눌러서 받으세요</div>
+    <div class="tip"><i class="ti ti-mouse"></i><span>혹시 <b>구글 드라이브 화면</b>이 뜨면 → 마우스 <b>오른쪽 클릭 → 다운로드</b>를 눌러 엑셀로 받으세요.</span></div>
 
     <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1X3fqJkT5NuvZghruYHl_kNE8Bg-5IQwC" target="_blank" rel="noopener">
       <div class="name" style="background:var(--ansan)">안산점</div>
