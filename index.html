@@ -11,12 +11,12 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.1.0/dist/tabler-icons.min.css">
 <style>
-  :root{--navy:#1d2230;--navy2:#2a3142;--gold:#b5903f;--gold2:#d8b25f;--ink:#1d2230;--sub:#5b6472;--mut:#9aa1ad;--line:#e8eaef;
+  :root{--navy:#1d2230;--navy2:#2a3142;--gold:#b5903f;--gold2:#d8b25f;--cream:#fbf3e0;--ink:#1d2230;--sub:#5b6472;--mut:#9aa1ad;--line:#e8eaef;
     --ansan:#2f9e6b;--anyang:#e0813a;--suseo:#3a76d8;--cheongdam:#7d4fc4;--nonhyeon:#a93b56;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:"Malgun Gothic","맑은 고딕",-apple-system,sans-serif;background:#eef0f3;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:14px;}
   .wrap{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.07);}
-  .hd{background:var(--navy);padding:20px;}
+  .hd{background:var(--navy);padding:18px 20px;}
   .hd .row{display:flex;align-items:center;gap:12px;}
   .hd .ico{width:42px;height:42px;background:var(--navy2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;flex-shrink:0;}
   .hd h1{font-size:19px;font-weight:700;color:#fff;letter-spacing:.3px;}
@@ -24,10 +24,26 @@
   .hd .upd{margin-left:auto;text-align:right;flex-shrink:0;}
   .hd .upd .t{font-size:11px;color:#7fd6a3;display:flex;align-items:center;gap:4px;justify-content:flex-end;}
   .hd .upd .d{font-size:13px;color:#fff;font-weight:700;}
-  .hd .bar{height:3px;width:56px;background:var(--gold);border-radius:3px;margin-top:14px;}
-  .lead{padding:18px 20px 4px;}
-  .lead h2{font-size:16px;font-weight:700;color:var(--ink);}
-  .lead p{font-size:12.5px;color:var(--sub);margin-top:4px;}
+  .hd .bar{height:3px;width:56px;background:var(--gold);border-radius:3px;margin-top:13px;}
+  .sec{padding:16px 16px 0;}
+  .sec-t{display:flex;align-items:center;gap:7px;margin-bottom:11px;font-size:14px;font-weight:700;color:var(--ink);flex-wrap:wrap;}
+  .sec-t i{color:var(--gold);font-size:18px;}
+  .sec-t .tag{font-size:11px;color:var(--mut);background:#f1f3f6;padding:2px 8px;border-radius:10px;font-weight:400;}
+  .tots{display:flex;gap:12px;}
+  .tot{flex:1;border-radius:13px;padding:14px 16px;}
+  .tot.sat{background:var(--navy);}
+  .tot.sun{background:var(--cream);border:1px solid #ecd9ad;}
+  .tot .lab{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;}
+  .tot.sat .lab{color:#aeb6c4;} .tot.sun .lab{color:#9a7c3a;}
+  .tot .big{display:flex;align-items:flex-end;gap:4px;margin-top:8px;}
+  .tot .num{font-size:32px;font-weight:700;line-height:1;}
+  .tot.sat .num{color:var(--gold2);} .tot.sun .num{color:var(--navy);}
+  .tot .myeong{font-size:14px;font-weight:700;margin-bottom:3px;}
+  .tot.sat .myeong{color:#e7c987;} .tot.sun .myeong{color:var(--sub);}
+  .tot .cnt{font-size:11.5px;margin-top:6px;display:flex;align-items:center;gap:5px;}
+  .tot.sat .cnt{color:#9aa3b2;} .tot.sun .cnt{color:#9a7c3a;}
+  .tot .cnt i{color:var(--gold);font-size:14px;}
+  .tot.sat .cnt b{color:#fff;} .tot.sun .cnt b{color:var(--navy);}
   .notice{margin:14px 16px 0;background:#f7faf8;border:1px solid #dce8e0;border-radius:11px;padding:12px 15px;}
   .notice .nt{font-size:12px;color:#5f8a72;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
   .notice .nt i{font-size:15px;}
@@ -38,18 +54,21 @@
   .branches .bt{font-size:13px;font-weight:700;margin:2px 2px 10px;}
   .bc{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden;text-decoration:none;color:inherit;transition:.12s;}
   .bc:active{transform:scale(.99);} .bc:hover{border-color:#cdd3dc;box-shadow:0 2px 10px rgba(0,0,0,.05);}
-  .bc .name{width:84px;align-self:stretch;display:flex;align-items:center;justify-content:center;padding:18px 4px;font-size:15px;font-weight:700;color:#fff;text-align:center;flex-shrink:0;}
-  .bc .mid{flex:1;padding:13px 14px;}
-  .bc .mid .m1{font-size:14px;font-weight:700;color:var(--ink);}
-  .bc .mid .m2{font-size:11.5px;color:var(--mut);margin-top:2px;}
-  .bc .go{margin:0 14px;display:flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:10px 15px;border-radius:9px;flex-shrink:0;}
-  .bc .go i{color:var(--gold2);font-size:16px;}
+  .bc .name{width:80px;align-self:stretch;display:flex;align-items:center;justify-content:center;padding:16px 4px;font-size:15px;font-weight:700;color:#fff;text-align:center;flex-shrink:0;}
+  .bc .mid{flex:1;padding:11px 14px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
+  .bc .st .l{font-size:10.5px;color:var(--mut);font-weight:700;}
+  .bc .st .v{font-size:17px;font-weight:700;color:var(--ink);}
+  .bc .st .v small{font-size:11px;color:#8590a0;font-weight:400;}
+  .bc .go{margin:0 12px;display:flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-size:12.5px;font-weight:700;padding:10px 14px;border-radius:9px;flex-shrink:0;}
+  .bc .go i{color:var(--gold2);font-size:15px;}
   .ft{text-align:center;padding:15px;font-size:11px;color:var(--mut);border-top:1px solid var(--line);line-height:1.7;}
   .ft b{color:var(--sub);}
   @media(max-width:520px){
+    .tots{flex-direction:column;}
     .hd h1{font-size:17px;}
-    .bc .name{width:70px;font-size:13.5px;}
-    .bc .go{margin:0 10px;padding:9px 12px;}
+    .bc .name{width:66px;font-size:13.5px;}
+    .bc .mid{gap:12px;padding:10px;}
+    .bc .go{margin:0 10px;padding:9px 11px;}
     .bc .go span{display:none;}
   }
 </style>
@@ -72,9 +91,20 @@
     <div class="bar"></div>
   </div>
 
-  <div class="lead">
-    <h2>지점별 최신 발주서를 받으세요</h2>
-    <p>지점을 누르면 발주서 엑셀을 받을 수 있어요. 다음 주말 <b>보증인원·건수</b>는 엑셀 첫 장에서 확인하세요.</p>
+  <div class="sec">
+    <div class="sec-t"><i class="ti ti-calendar-heart"></i> 다음 주말 행사 · 5개 지점 토탈 <span class="tag">웨딩프로 자동집계</span></div>
+    <div class="tots">
+      <div class="tot sat">
+        <div class="lab"><i class="ti ti-calendar"></i> 토요일 · 6/27</div>
+        <div class="big"><span class="num">5,170</span><span class="myeong">명</span></div>
+        <div class="cnt"><i class="ti ti-users"></i> 보증인원 · <b>행사 27건</b></div>
+      </div>
+      <div class="tot sun">
+        <div class="lab"><i class="ti ti-calendar"></i> 일요일 · 6/28</div>
+        <div class="big"><span class="num">2,630</span><span class="myeong">명</span></div>
+        <div class="cnt"><i class="ti ti-users"></i> 보증인원 · <b>행사 15건</b></div>
+      </div>
+    </div>
   </div>
 
   <div class="notice">
@@ -85,41 +115,56 @@
   </div>
 
   <div class="branches">
-    <div class="bt">지점별 발주서</div>
+    <div class="bt">지점별 발주서 — 눌러서 받으세요</div>
 
     <a class="bc" href="https://drive.google.com/drive/folders/1XBlScEBfi-o0IjNzD5EyMNzchI3H_0j2" target="_blank" rel="noopener">
       <div class="name" style="background:var(--ansan)">안산점</div>
-      <div class="mid"><div class="m1">최신 발주서</div><div class="m2">6/20(토) 갱신</div></div>
+      <div class="mid">
+        <div class="st"><div class="l">토 보증</div><div class="v">1,930<small>명</small></div></div>
+        <div class="st"><div class="l">일 보증</div><div class="v">630<small>명</small></div></div>
+      </div>
       <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
     </a>
 
     <a class="bc" href="https://drive.google.com/drive/folders/1vrmiT5Lb6NOSC8fM3l7EeViqfBSMr2-6" target="_blank" rel="noopener">
       <div class="name" style="background:var(--anyang)">안양점</div>
-      <div class="mid"><div class="m1">최신 발주서</div><div class="m2">6/20(토) 갱신</div></div>
+      <div class="mid">
+        <div class="st"><div class="l">토 보증</div><div class="v">1,160<small>명</small></div></div>
+        <div class="st"><div class="l">일 보증</div><div class="v">850<small>명</small></div></div>
+      </div>
       <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
     </a>
 
     <a class="bc" href="https://drive.google.com/drive/folders/1hEGL1pyoAtalpAkP3eGH_pFuotNESlOn" target="_blank" rel="noopener">
       <div class="name" style="background:var(--suseo)">수서점</div>
-      <div class="mid"><div class="m1">최신 발주서</div><div class="m2">6/20(토) 갱신</div></div>
+      <div class="mid">
+        <div class="st"><div class="l">토 보증</div><div class="v">900<small>명</small></div></div>
+        <div class="st"><div class="l">일 보증</div><div class="v">500<small>명</small></div></div>
+      </div>
       <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
     </a>
 
     <a class="bc" href="https://drive.google.com/drive/folders/1FpROl-8pc9rSB4Rq8EYhW4iZmUhBVZwj" target="_blank" rel="noopener">
       <div class="name" style="background:var(--cheongdam)">청담점</div>
-      <div class="mid"><div class="m1">최신 발주서</div><div class="m2">6/20(토) 갱신</div></div>
+      <div class="mid">
+        <div class="st"><div class="l">토 보증</div><div class="v">580<small>명</small></div></div>
+        <div class="st"><div class="l">일 보증</div><div class="v">350<small>명</small></div></div>
+      </div>
       <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
     </a>
 
     <a class="bc" href="https://drive.google.com/drive/folders/19qoJfYmHrwtm6cS282aMmXMUSIRiUGEz" target="_blank" rel="noopener">
       <div class="name" style="background:var(--nonhyeon)">논현점</div>
-      <div class="mid"><div class="m1">최신 발주서</div><div class="m2">6/20(토) 갱신</div></div>
+      <div class="mid">
+        <div class="st"><div class="l">토 보증</div><div class="v">600<small>명</small></div></div>
+        <div class="st"><div class="l">일 보증</div><div class="v">300<small>명</small></div></div>
+      </div>
       <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
     </a>
 
   </div>
 
-  <div class="ft"><b>빌라드지디 조리부</b> · 본사 관리 · 매주 금요일 갱신<br>발주서는 지정된 직원만 받을 수 있습니다</div>
+  <div class="ft"><b>빌라드지디 조리부</b> · 본사 관리 · 매주 금요일 갱신</div>
 </div>
 </body>
 </html>
