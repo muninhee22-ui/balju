@@ -27,7 +27,13 @@
   .hddate .ck{display:flex;align-items:center;justify-content:flex-end;gap:4px;font-size:clamp(8px,1.9vw,11.5px);color:#7fd6a3;font-weight:700;}
   .hddate .ck i{font-size:clamp(10px,2.2vw,14px);}
   .hddate .dt{display:block;font-size:clamp(10px,2.6vw,15px);color:#fff;font-weight:700;margin-top:2px;letter-spacing:.5px;}
-  .hd{background:var(--navy);padding:18px 20px;}
+  .hd{background:var(--navy);padding:18px 20px;position:relative;}
+  .hdate{position:absolute;top:14px;right:18px;font-size:11px;color:#9fb0cf;font-weight:700;display:flex;align-items:center;gap:4px;}
+  .hdate i{color:#7fd6a3;font-size:13px;}
+  .hcenter{text-align:center;padding:2px 0;}
+  .hci{font-size:23px;color:var(--gold2);line-height:1;margin-bottom:5px;}
+  .hcline{width:58px;height:2px;background:var(--gold);border-radius:2px;margin:9px auto 7px;}
+  .hcsub{font-size:13px;color:#cfd6e2;font-weight:500;letter-spacing:.5px;}
   .hd .row{display:flex;align-items:center;gap:12px;}
   .hd .ico{width:42px;height:42px;background:var(--navy2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;flex-shrink:0;}
   .hd h1{font-size:19px;font-weight:700;color:#fff;letter-spacing:.3px;}
@@ -105,18 +111,13 @@
 <div class="wrap">
 
   <div class="hd">
-    <div class="row">
-      <div class="ico"><i class="ti ti-tools-kitchen-2"></i></div>
-      <div class="brand">
-        <div class="wm">VILLA <span class="de">DE</span> GD</div>
-        <div class="sub">조리부 발주서 · 5개 지점</div>
-      </div>
-      <div class="upd">
-        <div class="t"><i class="ti ti-circle-check-filled"></i> 최신 갱신</div>
-        <div class="d">6 / 20 (토)</div>
-      </div>
+    <div class="hdate"><i class="ti ti-circle-check-filled"></i> 최신 갱신 · 6/20(토)</div>
+    <div class="hcenter">
+      <div class="hci"><i class="ti ti-tools-kitchen-2"></i></div>
+      <div class="wm">VILLA <span class="de">DE</span> GD</div>
+      <div class="hcline"></div>
+      <div class="hcsub">조리부 발주서 · 5개 지점</div>
     </div>
-    <div class="bar"></div>
   </div>
 
 
