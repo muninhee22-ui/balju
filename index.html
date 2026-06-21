@@ -78,6 +78,13 @@
   .chgd{color:#9aa1ad;font-weight:400;font-size:11px;margin-left:2px;}
   .chgi{font-size:12.5px;color:#3a4150;margin-top:4px;padding-left:3px;}
   .chgi b{color:#1a2233;font-weight:700;}
+  .chgday{margin-top:7px;}
+  .chghd{font-size:12.5px;font-weight:700;color:#b5903f;cursor:pointer;user-select:none;display:flex;align-items:center;gap:5px;padding:3px 0;}
+  .chghd::before{content:"▸";font-size:9px;color:#b5903f;}
+  .chgday.open>.chghd::before{content:"▾";}
+  .chgnew{font-size:9.5px;font-weight:700;color:#fff;background:#b5903f;border-radius:4px;padding:1px 6px;margin-left:4px;}
+  .chgday>.chgbody{display:none;}
+  .chgday.open>.chgbody{display:block;}
   .pill{font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
   .pill.new{background:#e6f7ef;color:#00a854;} .pill.chg{background:#fff7e6;color:#fa8c16;}
   .branches{padding:14px 16px 18px;}
@@ -153,16 +160,21 @@
     <div class="li"><i class="ti ti-palette"></i><span>변경 품목은 <b>색상으로 표기</b> — <span class="pill new">신규품목</span> <span class="pill chg">단가변경</span></span></div>
     <div class="li"><i class="ti ti-shopping-cart"></i><span>추가 인터넷 발주는 기존처럼, 업체가 품목 등록하면 <b>이후 자동 표기</b>됩니다.</span></div>
     <div class="chglog">
-      <div class="chgt"><i class="ti ti-history"></i> 최근 변경 <span class="chgd">2026. 6. 21</span></div>
-      <div class="chgi">· 3개월 미사용 품목 정리</div>
-      <div class="chgi">· 신규품목 <b>가나다순</b>으로 맨 아래 정렬</div>
-      <div class="chgi">· 한들팜에 <b>입고요청</b> 칸 추가</div>
-      <div class="chgi">· <b>재고입력 시트</b> 추가 — 모든 업체 재고 한눈에</div>
-      <div class="chgi">· 수서 베이커리-혜성 → <b>혜성(베이커리)</b> 금액 별도 + 추가입력 메모 분리</div>
-      <div class="chgi">· 표지에 <b>홀별 예식 건수</b>(토/일) 추가</div>
-      <div class="chgi">· 수서 <b>지엔에프에스</b> 업체 제외</div>
-      <div class="chgi">· 품번 빈 칸 있는 시트에 <b>사유 안내</b> 표시</div>
-      <div class="chgi">· <b>발주일자 자동</b> — 파일 여는 날짜로 표시</div>
+      <div class="chgt"><i class="ti ti-history"></i> 최근 변경</div>
+      <div class="chgday open">
+        <div class="chghd" onclick="toggleDay(this)">2026. 6. 21 <span class="chgnew">최신</span></div>
+        <div class="chgbody">
+          <div class="chgi">· 3개월 미사용 품목 정리</div>
+          <div class="chgi">· 신규품목 <b>가나다순</b>으로 맨 아래 정렬</div>
+          <div class="chgi">· 한들팜에 <b>입고요청</b> 칸 추가</div>
+          <div class="chgi">· <b>재고입력 시트</b> 추가 — 모든 업체 재고 한눈에</div>
+          <div class="chgi">· 수서 베이커리-혜성 → <b>혜성(베이커리)</b> 금액 별도 + 추가입력 메모 분리</div>
+          <div class="chgi">· 표지에 <b>홀별 예식 건수</b>(토/일) 추가</div>
+          <div class="chgi">· 수서 <b>지엔에프에스</b> 업체 제외</div>
+          <div class="chgi">· 품번 빈 칸 있는 시트에 <b>사유 안내</b> 표시</div>
+          <div class="chgi">· <b>발주일자 자동</b> — 파일 여는 날짜로 표시</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -224,5 +236,6 @@
 
   <div class="ft"><b>빌라드지디 조리부</b> · 본사 관리 · 매주 금요일 갱신</div>
 </div>
+<script>function toggleDay(el){el.parentElement.classList.toggle('open');}</script>
 </body>
 </html>
