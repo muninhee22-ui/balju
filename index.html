@@ -135,7 +135,7 @@
 <div class="wrap">
 
   <div class="hd">
-    <div class="hdate"><i class="ti ti-circle-check-filled"></i> 최신 갱신 · 6/25(목)</div>
+    <div class="hdate"><i class="ti ti-circle-check-filled"></i> 최신 갱신 · <span id="hd">6/25(목)</span></div>
     <div class="hcenter">
       <div class="hci"><i class="ti ti-tools-kitchen-2"></i></div>
       <div class="wm">VILLA <span class="de">DE</span> GD</div>
@@ -258,6 +258,7 @@
 
   <div class="ft"><b>빌라드지디 조리부</b> · 본사 관리 · 매주 금요일 갱신</div>
 </div>
-<script>function toggleDay(el){el.parentElement.classList.toggle('open');}</script>
+<script>function toggleDay(el){el.parentElement.classList.toggle('open');}
+(function(){var d=new Date(document.lastModified),D=['일','월','화','수','목','금','토'],e=document.getElementById('hd');if(e&&!isNaN(d.getTime()))e.textContent=(d.getMonth()+1)+'/'+d.getDate()+'('+D[d.getDay()]+')';})();</script>
 </body>
 </html>
