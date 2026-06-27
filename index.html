@@ -114,6 +114,9 @@
   .bc .go{margin:0 12px;display:flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-size:12.5px;font-weight:700;padding:10px 14px;border-radius:9px;flex-shrink:0;}
   .bc .go i{color:var(--gold2);font-size:15px;}
   .ft{text-align:center;padding:15px;font-size:11px;color:var(--mut);border-top:1px solid var(--line);line-height:1.7;}
+  .contact{text-align:center;margin:16px 16px 4px;background:#fff;border:1px solid #e6e9ef;border-left:4px solid #b5903f;border-radius:11px;padding:13px 16px;font-size:14px;color:#1d2230;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 1px 6px rgba(29,34,48,.05);}
+  .contact i{font-size:20px;color:#b5903f;}
+  .contact b{color:#b5903f;font-weight:800;}
   .ft b{color:var(--sub);}
   .alert{margin:14px 16px 0;background:#1a2233;border:none;border-radius:11px;padding:13px 16px;display:flex;align-items:center;gap:11px;cursor:pointer;width:calc(100% - 32px);text-align:left;transition:.12s;font-family:inherit;}
   .alert:hover{background:#232c40;} .alert:active{transform:scale(.99);}
@@ -171,7 +174,18 @@
     <div class="chglog">
       <div class="chgt"><i class="ti ti-history"></i> 최근 변경</div>
       <div class="chgday open">
-        <div class="chghd" onclick="toggleDay(this)">2026. 6. 27 <span class="chgnew">최신</span></div>
+        <div class="chghd" onclick="toggleDay(this)">2026. 6. 28 <span class="chgnew">최신</span></div>
+        <div class="chgbody">
+          <div class="chgi"><b>[전 지점]</b> 묶음 시트(기타발주·대림+바다)를 <b>업체별 개별 시트</b>로 분리</div>
+          <div class="chgi"><b>[전 지점]</b> 업체 이름을 <b>ERP 공식 거래처명</b>으로 통일 (예: 한들팜→한들유통, 씨엔지밴딩→씨앤지벤딩주식회사, 마블플러스→마블플러스원)</div>
+          <div class="chgi"><b>[전 지점]</b> <b>재고입력</b> 시트 — 거래처PK 빠진 곳 모두 채움 (ERP 그대로 가져오기)</div>
+          <div class="chgi"><b>[수서·청담]</b> 베이커리·제과 <b>전 품목을 혜성식품 시트에 연동</b> — 제과 시트에 발주·재고를 입력하면 혜성식품 시트에 자동 반영. <b>ERP 발주·재고는 혜성식품 시트 하나로</b> 하세요</div>
+          <div class="chgi"><b>[수서·청담]</b> <b>발주요약</b> — 베이커리·제과는 "혜성식품 연동 · 총합 미적용"으로 별도 표기 (총합계는 혜성식품으로만 집계)</div>
+          <div class="chgi"><b>[전 지점]</b> 단가변경 빨강 박스 = <b>전주(지난주) 기준</b> 변경분만 표시</div>
+        </div>
+      </div>
+      <div class="chgday">
+        <div class="chghd" onclick="toggleDay(this)">2026. 6. 27</div>
         <div class="chgbody">
           <div class="chgi">· 발주서 <b>세로형 인쇄</b>로 변경</div>
           <div class="chgi">· 혜성식품(제과·베이커리) 금액 <b>혜성식품으로 통합</b> 집계 (같은 업체)</div>
@@ -267,6 +281,7 @@
 
   </div>
 
+  <div class="contact"><i class="ti ti-headset"></i><span>문의사항은 <b>문승호 이사</b>에게 문의하세요</span></div>
   <div class="ft"><b>빌라드지디 조리부</b> · 본사 관리 · 매주 금요일 갱신</div>
 </div>
 <script>function toggleDay(el){el.parentElement.classList.toggle('open');}
