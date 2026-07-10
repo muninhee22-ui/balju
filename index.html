@@ -2,306 +2,547 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1d2230">
+<meta name="theme-color" content="#161d33">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
 <title>빌라드지디 조리부 발주서</title>
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.1.0/dist/tabler-icons.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.1.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap">
 <style>
-  :root{--navy:#1a2233;--navy2:#2a3346;--gold:#b5903f;--gold2:#d8b25f;--cream:#fbf3e0;--ink:#1a2233;--sub:#5b6472;--mut:#9aa1ad;--line:#e8eaef;
-    --ansan:#16b37c;--anyang:#f39c12;--suseo:#3b82f6;--cheongdam:#9333ea;--nonhyeon:#b91c1c;}
+  :root{
+    --navy:#161d33; --navy2:#212a45; --navyln:#2c3556;
+    --gold:#c9a24b; --gold2:#e3c47e; --goldsoft:#f3e7c8;
+    --bg:#eef1f7; --card:#ffffff; --ink:#1a2136; --sub:#5a6479; --mut:#98a1b4; --line:#e6e9f1;
+    --ansan:#12a97a; --anyang:#ef8f1c; --suseo:#2f74e0; --cheongdam:#8b3fd6; --nonhyeon:#c62b3c;
+    --new:#12a15e; --newbg:#e6f6ee; --chg:#e8890c; --chgbg:#fdf1dd;
+    --shadow:0 6px 22px rgba(22,29,51,.08); --shadow2:0 2px 10px rgba(22,29,51,.06);
+  }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:"Malgun Gothic","맑은 고딕",-apple-system,sans-serif;background:#f8f9fa;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:14px;}
-  .wrap{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.07);}
-  .hdimg{display:block;width:100%;height:auto;}
-  .hdwrap{position:relative;line-height:0;}
-  .hddate{position:absolute;top:50%;right:4.5%;transform:translateY(-50%);text-align:right;line-height:1.25;}
-  .hddate .ck{display:flex;align-items:center;justify-content:flex-end;gap:4px;font-size:clamp(8px,1.9vw,11.5px);color:#7fd6a3;font-weight:700;}
-  .hddate .ck i{font-size:clamp(10px,2.2vw,14px);}
-  .hddate .dt{display:block;font-size:clamp(10px,2.6vw,15px);color:#fff;font-weight:700;margin-top:2px;letter-spacing:.5px;}
-  .hd{background:var(--navy);padding:18px 20px;position:relative;}
-  .hdate{position:absolute;top:14px;right:18px;font-size:11px;color:#9fb0cf;font-weight:700;display:flex;align-items:center;gap:4px;}
-  .hdate i{color:#7fd6a3;font-size:13px;}
-  .hcenter{text-align:center;padding:2px 0;}
-  .hci{font-size:23px;color:var(--gold2);line-height:1;margin-bottom:5px;}
-  .hcline{width:58px;height:2px;background:var(--gold);border-radius:2px;margin:9px auto 7px;}
-  .hcsub{font-size:13px;color:#cfd6e2;font-weight:500;letter-spacing:.5px;}
-  .hd .row{display:flex;align-items:center;gap:12px;}
-  .hd .ico{width:42px;height:42px;background:var(--navy2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;flex-shrink:0;}
-  .hd h1{font-size:19px;font-weight:700;color:#fff;letter-spacing:.3px;}
-  .hd .br{font-size:11.5px;color:#9aa3b2;margin-top:2px;}
-  .hd .upd{margin-left:auto;text-align:right;flex-shrink:0;}
-  .hd .upd .t{font-size:11px;color:#7fd6a3;display:flex;align-items:center;gap:4px;justify-content:flex-end;}
-  .hd .upd .d{font-size:13px;color:#fff;font-weight:700;}
-  .hd .bar{height:3px;width:56px;background:var(--gold);border-radius:3px;margin-top:13px;}
-  .brand{display:flex;flex-direction:column;}
-  .brand .fl{margin-bottom:4px;}
-  .wm{font-family:'Cinzel','Georgia',serif;font-size:21px;font-weight:600;color:#fff;letter-spacing:2px;line-height:1;}
-  .wm .de{font-size:12px;color:#ffffff;letter-spacing:1px;margin:0 3px;}
-  .brand .sub{font-size:13px;color:#cfd6e2;font-weight:500;letter-spacing:.3px;margin-top:5px;}
-  .sec{padding:16px 16px 0;}
-  .sec-t{display:flex;align-items:center;gap:7px;margin-bottom:11px;font-size:14px;font-weight:700;color:var(--ink);flex-wrap:wrap;}
-  .sec-t i{color:var(--gold);font-size:18px;}
-  .sec-t .tag{font-size:11px;color:var(--mut);background:#f1f3f6;padding:2px 8px;border-radius:10px;font-weight:400;}
-  .tots{display:flex;gap:12px;}
-  .tot{flex:1;border-radius:13px;padding:14px 16px;}
-  .tot.sat{background:var(--navy);}
-  .tot.sun{background:var(--navy);}
-  .tot .lab{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;}
-  .tot.sat .lab{color:#aeb6c4;} .tot.sun .lab{color:#9fb0cf;}
-  .tot .big{display:flex;align-items:flex-end;gap:4px;margin-top:8px;}
-  .tot .num{font-size:32px;font-weight:700;line-height:1;}
-  .tot.sat .num{color:var(--gold2);} .tot.sun .num{color:#7fb0e8;}
-  .tot .myeong{font-size:14px;font-weight:700;margin-bottom:3px;}
-  .tot.sat .myeong{color:#e7c987;} .tot.sun .myeong{color:#a9c2e0;}
-  .tot .cnt{font-size:11.5px;margin-top:6px;display:flex;align-items:center;gap:5px;}
-  .tot.sat .cnt{color:#9aa3b2;} .tot.sun .cnt{color:#9fb0cf;}
-  .tot .cnt i{color:var(--gold);font-size:14px;}
-  .tot.sat .cnt b{color:#fff;} .tot.sun .cnt b{color:#fff;}
-  .notice{margin:14px 16px 0;background:#fff;border:1px solid #e6e9ef;border-left:4px solid #b5903f;border-radius:11px;padding:14px 16px;box-shadow:0 1px 6px rgba(29,34,48,.05);}
-  .notice .nt{font-size:14.5px;color:#1d2230;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:7px;}
-  .notice .nt i{font-size:20px;color:#b5903f;}
-  .notice div.li{font-size:13px;color:#2f3640;margin-top:9px;font-weight:500;display:flex;align-items:flex-start;gap:9px;line-height:1.5;}
-  .notice div.li>i{font-size:17px;color:#3b82f6;margin-top:1px;flex-shrink:0;}
-  .notice div.li b{font-weight:700;color:#1d2230;}
-  .chglog{margin-top:11px;padding-top:10px;border-top:1px dashed #dde2ea;}
-  .chgt{font-size:12.5px;font-weight:700;color:#b5903f;display:flex;align-items:center;gap:5px;}
-  .chgt i{font-size:15px;}
-  .chgd{color:#9aa1ad;font-weight:400;font-size:11px;margin-left:2px;}
-  .chgi{font-size:12.5px;color:#3a4150;margin-top:4px;padding-left:3px;}
-  .chgi b{color:#1a2233;font-weight:700;}
-  .chgday{margin-top:7px;}
-  .chghd{font-size:12.5px;font-weight:700;color:#b5903f;cursor:pointer;user-select:none;display:flex;align-items:center;gap:5px;padding:3px 0;}
-  .chghd::before{content:"▸";font-size:9px;color:#b5903f;}
+  html{-webkit-text-size-adjust:100%;}
+  body{font-family:"Pretendard","Pretendard Variable",-apple-system,"Malgun Gothic",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;font-weight:500;
+    -webkit-font-smoothing:antialiased;padding:16px;letter-spacing:-.2px;}
+  .page{max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+  a{text-decoration:none;color:inherit;}
+
+  /* ===== HEADER ===== */
+  .head{background:linear-gradient(135deg,#1a2340 0%,#141a30 55%,#10152a 100%);border-radius:20px;
+    padding:22px 26px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .head::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+    background:radial-gradient(circle,rgba(201,162,75,.16),transparent 70%);pointer-events:none;}
+  .head .top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand .mk{width:48px;height:48px;border-radius:14px;background:rgba(201,162,75,.14);
+    border:1px solid rgba(227,196,126,.35);display:flex;align-items:center;justify-content:center;
+    color:var(--gold2);font-size:26px;flex-shrink:0;}
+  .brand .tt .wm{font-family:'Cinzel',serif;font-size:23px;font-weight:700;color:#fff;letter-spacing:2px;line-height:1;}
+  .brand .tt .wm .de{font-size:13px;color:var(--gold2);margin:0 3px;letter-spacing:1px;}
+  .brand .tt .sub{font-size:12.5px;color:#b9c2d6;margin-top:6px;letter-spacing:.3px;font-weight:600;}
+  .updated{text-align:right;flex-shrink:0;}
+  .updated .u1{display:flex;align-items:center;gap:5px;justify-content:flex-end;font-size:11px;color:#7fd6a3;font-weight:700;}
+  .updated .u2{font-size:14px;color:#fff;font-weight:700;margin-top:3px;}
+  .goldbar{height:3px;width:64px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:3px;margin-top:16px;}
+
+  /* refresh */
+  .refresh{width:100%;background:linear-gradient(135deg,#1d2646,#161d33);border:none;border-radius:16px;
+    padding:15px 20px;display:flex;align-items:center;gap:13px;cursor:pointer;font-family:inherit;
+    text-align:left;transition:.14s;box-shadow:var(--shadow2);}
+  .refresh:hover{transform:translateY(-1px);box-shadow:var(--shadow);}
+  .refresh:active{transform:scale(.995);}
+  .refresh i.lead{font-size:24px;color:var(--gold2);flex-shrink:0;}
+  .refresh .tx{flex:1;color:#fff;font-weight:800;font-size:15.5px;}
+  .refresh .tx small{display:block;font-weight:500;font-size:11.5px;color:#a7b2ca;margin-top:3px;letter-spacing:0;}
+  .refresh i.arr{font-size:20px;color:#8f9cb8;}
+
+  /* section shell */
+  .sec-h{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;color:var(--ink);margin:2px 2px 12px;}
+  .sec-h i{color:var(--gold);font-size:19px;}
+  .sec-h .tag{font-size:11px;color:var(--mut);background:#e9edf5;padding:3px 9px;border-radius:20px;font-weight:700;letter-spacing:0;}
+  .sec-h .tag.live{color:#0e9f6e;background:#e4f6ee;}
+  .sec-h .tag.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#12a15e;margin-right:5px;vertical-align:middle;animation:pulse 1.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  /* ===== BRANCH DOWNLOAD CARDS (TOP) ===== */
+  .branchgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(325px,1fr));gap:12px;}
+  @media(min-width:1100px){.branchgrid{grid-template-columns:repeat(3,1fr);}}
+  .bc{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    display:flex;flex-direction:column;transition:.14s;box-shadow:var(--shadow2);}
+  .bc:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#d4dae6;}
+  .bc .body{flex:1;padding:15px 17px;min-width:0;}
+  .bc .nm{display:flex;align-items:baseline;gap:9px;}
+  .bc .nm b{font-size:21px;font-weight:900;letter-spacing:-.3px;}
+  .bc .nm small{font-family:'Cinzel',serif;font-size:9.5px;font-weight:600;letter-spacing:1.4px;color:var(--mut);}
+  .bc .stats{display:flex;gap:18px;margin-top:11px;}
+  .bc .stat .l{font-size:10.5px;color:var(--mut);font-weight:700;}
+  .bc .stat .v{font-size:18px;font-weight:800;line-height:1.15;}
+  .bc .stat .v small{font-size:11px;color:#8590a4;font-weight:600;}
+  .bc .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:10px;}
+  .bc .meta .mi{font-size:11.5px;color:#8590a4;font-weight:600;white-space:nowrap;}
+  .bc .meta .mi b.g{color:var(--new);} .bc .meta .mi b.a{color:var(--chg);}
+  .bc .meta .mi em{font-style:normal;color:#aab2c2;}
+  .bc .meta .ev{display:flex;align-items:center;gap:4px;color:var(--sub);font-weight:800;}
+  .bc .meta .ev i{font-size:13px;color:var(--gold);}
+  .bc .meta .ev b{color:var(--ink);}
+  .bc .meta .hc{font-size:10.5px;background:#f1f4fa;border:1px solid #e5e9f2;border-radius:7px;padding:2px 8px;color:#5a6479;white-space:nowrap;font-weight:600;}
+  .bc .meta .hc b{color:var(--ink);font-weight:800;margin-left:3px;}
+  .bc .meta .hc.off{color:#aab2c2;background:#f6f7fa;}
+  .bc .dl{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:auto;
+    padding:13px;font-size:14.5px;font-weight:800;color:#fff;background:var(--navy);transition:.14s;}
+  .bc .dl i{font-size:17px;color:var(--gold2);}
+  .bc:hover .dl{background:var(--navy2);}
+  /* mystery card (6번째 칸) */
+  .bc.mystery{border:2px dashed #ccd4e4;background:linear-gradient(160deg,#fbfcff,#f1f4fb);box-shadow:none;}
+  .bc.mystery:hover{border-color:var(--gold);box-shadow:var(--shadow2);}
+  .myst{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 15px;text-align:center;}
+  .myst .q{font-size:64px;font-weight:900;line-height:1;
+    background:linear-gradient(135deg,var(--gold2),#8a6a20);-webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:bob 2.8s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-8px) rotate(5deg)}}
+  .myst .qt{font-size:19px;font-weight:900;color:var(--ink);margin-top:12px;letter-spacing:2px;}
+  .myst .qs{font-family:'Cinzel',serif;font-size:10px;color:var(--mut);font-weight:600;margin-top:5px;letter-spacing:2px;}
+  .tipbar{grid-column:1/-1;font-size:12.5px;color:#7a8497;background:#eef1f7;border:1px dashed #d6dceb;
+    border-radius:11px;padding:10px 14px;display:flex;align-items:center;gap:9px;font-weight:600;flex-wrap:wrap;}
+  .tipbar i{font-size:16px;color:var(--suseo);flex-shrink:0;}
+  .tipbar .url{margin-left:auto;background:var(--navy);color:var(--gold2);font-weight:800;font-size:13px;
+    padding:7px 14px;border-radius:9px;letter-spacing:.3px;display:flex;align-items:center;gap:7px;box-shadow:var(--shadow2);}
+  .tipbar .url i{color:var(--gold2);font-size:15px;}
+
+  /* ===== GENERIC CARD ===== */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 17px;box-shadow:var(--shadow2);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .grid-wx{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;}
+
+  /* weekend totals — slim strip */
+  .totstrip{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:13px 17px;}
+  .totstrip .sec-h{margin:0;flex-shrink:0;}
+  .tots{display:flex;gap:9px;flex:1;min-width:300px;}
+  .tot{flex:1;border-radius:11px;padding:9px 14px;background:linear-gradient(135deg,#1d2646,#161d33);
+    display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;}
+  .tot .lab{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:800;color:#aeb8cf;white-space:nowrap;}
+  .tot .big{display:flex;align-items:baseline;gap:2px;}
+  .tot .num{font-size:20px;font-weight:800;line-height:1;}
+  .tot.sat .num{color:var(--gold2);} .tot.sun .num{color:#82b4ee;}
+  .tot .myeong{font-size:11.5px;font-weight:800;color:#cdd5e6;}
+  .tot .cnt{font-size:11px;color:#9aa4bc;font-weight:600;white-space:nowrap;}
+  .tot .cnt b{color:#fff;}
+
+  /* weather + food safety */
+  .wx{display:flex;flex-direction:column;gap:10px;height:100%;}
+  .wxrow{display:flex;gap:9px;}
+  .wxc{flex:1;background:#f5f7fc;border:1px solid #e9edf6;border-radius:12px;padding:11px 10px;text-align:center;min-width:0;}
+  .wxc .cty{font-size:11px;color:var(--sub);font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .wxc .ic{font-size:26px;line-height:1;margin:6px 0 4px;}
+  .wxc .tp{font-size:19px;font-weight:800;color:var(--ink);}
+  .wxc .ds{font-size:10.5px;color:var(--mut);font-weight:600;margin-top:2px;}
+  .wxc .hu{font-size:10px;color:var(--suseo);font-weight:700;margin-top:3px;}
+  .risk{border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;color:#fff;}
+  .risk .lv{flex-shrink:0;text-align:center;}
+  .risk .lv i{font-size:26px;} .risk .lv .lt{font-size:15px;font-weight:900;margin-top:1px;}
+  .risk .msg{font-size:12px;font-weight:600;line-height:1.45;opacity:.97;}
+  .risk .msg b{font-weight:800;}
+  .risk.g{background:linear-gradient(135deg,#12a15e,#0c7c48);}
+  .risk.y{background:linear-gradient(135deg,#e0a90c,#c6890a);}
+  .risk.o{background:linear-gradient(135deg,#e8770c,#cf5f0a);}
+  .risk.r{background:linear-gradient(135deg,#d8323f,#b31f2c);}
+  .wxnote{font-size:10.5px;color:var(--mut);font-weight:600;text-align:right;}
+  .rules{display:flex;flex-direction:column;gap:6px;}
+  .rule{display:flex;align-items:flex-start;gap:8px;font-size:12.5px;font-weight:600;color:#3b4457;
+    background:#f7f9fd;border:1px solid #eaeef6;border-radius:10px;padding:9px 12px;line-height:1.5;}
+  .rule i{font-size:15px;color:var(--chg);flex-shrink:0;margin-top:2px;}
+  .rule b{color:var(--ink);font-weight:800;}
+  .rule.hot{background:#fdf3f0;border-color:#f5ddd6;}
+  .rule.hot i{color:#d8323f;}
+
+  /* seasonal price */
+  .season .sh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+  .season .sh .mo{font-size:15px;font-weight:800;}
+  .season .sh .desc{font-size:12px;color:var(--sub);font-weight:600;}
+  .pricecols{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .pcol .pt{font-size:12.5px;font-weight:800;display:flex;align-items:center;gap:6px;margin-bottom:9px;}
+  .pcol.cheap .pt{color:var(--new);} .pcol.pricey .pt{color:var(--chg);}
+  .pcol .chips{display:flex;flex-wrap:wrap;gap:7px;}
+  .chip{font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:20px;display:flex;align-items:center;gap:5px;}
+  .chip i{font-size:13px;}
+  .chip.dn{background:var(--newbg);color:#0d7c47;}
+  .chip.up{background:var(--chgbg);color:#b7690a;}
+  .seasonnote{margin-top:13px;font-size:12.5px;color:#3b4457;font-weight:600;background:#faf6ec;
+    border:1px solid #efe4c8;border-left:4px solid var(--gold);border-radius:0 11px 11px 0;padding:11px 14px;line-height:1.55;}
+  .seasonnote .snt{display:flex;align-items:center;gap:6px;font-weight:900;color:var(--ink);font-size:13px;margin-bottom:7px;}
+  .seasonnote .snt i{color:var(--gold);font-size:16px;}
+  .seasonnote ul{margin:0;padding-left:17px;}
+  .seasonnote li{margin-top:5px;}
+  .seasonnote li::marker{color:var(--gold);}
+  .seasonfoot{margin-top:9px;font-size:10.5px;color:var(--mut);font-weight:600;}
+
+  /* notice */
+  .notice .li{font-size:13px;color:#3b4457;margin-top:9px;font-weight:600;display:flex;align-items:flex-start;gap:9px;line-height:1.5;}
+  .notice .li>i{font-size:17px;color:var(--suseo);margin-top:1px;flex-shrink:0;}
+  .notice .li b{font-weight:800;color:var(--ink);}
+  .pill{font-size:11px;font-weight:800;padding:1px 8px;border-radius:10px;}
+  .pill.new{background:var(--newbg);color:var(--new);} .pill.chg{background:var(--chgbg);color:var(--chg);}
+
+  /* changelog collapsed */
+  .clog{margin-top:4px;}
+  .clog>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:800;color:var(--gold);padding:11px 13px;background:#faf6ec;
+    border:1px solid #efe4c8;border-radius:12px;user-select:none;}
+  .clog>summary::-webkit-details-marker{display:none;}
+  .clog>summary i.h{font-size:17px;}
+  .clog>summary .cnt{margin-left:auto;font-size:11px;color:var(--mut);font-weight:700;display:flex;align-items:center;gap:4px;}
+  .clog>summary .chev{transition:.2s;font-size:16px;color:var(--gold);}
+  .clog[open]>summary .chev{transform:rotate(180deg);}
+  .clog[open]>summary{border-radius:12px 12px 0 0;}
+  .clogbody{border:1px solid #efe4c8;border-top:none;border-radius:0 0 12px 12px;padding:6px 14px 12px;background:#fffdf8;}
+  .chgday{border-top:1px dashed #ece1c9;padding:9px 0 3px;}
+  .chgday:first-child{border-top:none;}
+  .chghd{font-size:12.5px;font-weight:800;color:var(--gold);cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px;padding:3px 0;}
+  .chghd::before{content:"▸";font-size:9px;color:var(--gold);transition:.15s;}
   .chgday.open>.chghd::before{content:"▾";}
-  .chgnew{font-size:9.5px;font-weight:700;color:#fff;background:#b5903f;border-radius:4px;padding:1px 6px;margin-left:4px;}
-  .chgday>.chgbody{display:none;}
-  .chgday.open>.chgbody{display:block;}
-  .pill{font-size:11px;font-weight:700;padding:1px 8px;border-radius:10px;}
-  .pill.new{background:#e6f7ef;color:#00a854;} .pill.chg{background:#fff7e6;color:#fa8c16;}
-  .branches{padding:14px 16px 18px;}
-  .branches .bt{font-size:13px;font-weight:700;margin:2px 2px 8px;}
-  .tip{font-size:12px;color:#7a8390;background:#f4f6f9;border:1px solid #e4e8ee;border-radius:9px;padding:8px 12px;margin:0 2px 12px;display:flex;align-items:center;gap:8px;line-height:1.4;}
-  .tip i{font-size:17px;color:#3b82f6;flex-shrink:0;}
-  .tip b{color:#3a4150;font-weight:700;}
-  .bc{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:10px;overflow:hidden;text-decoration:none;color:inherit;transition:.12s;}
-  .bc:active{transform:scale(.99);} .bc:hover{border-color:#cdd3dc;box-shadow:0 2px 10px rgba(0,0,0,.05);}
-  .bc .name{width:84px;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:14px 4px;font-size:15px;font-weight:700;color:#fff;text-align:center;flex-shrink:0;}
-  .bc .name small{font-family:'Cinzel','Georgia',serif;font-size:8.5px;font-weight:600;letter-spacing:1.2px;opacity:.85;}
-  .bc .mid{flex:1;padding:11px 14px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
-  .bc .st .l{font-size:10.5px;color:var(--mut);font-weight:700;}
-  .bc .st .v{font-size:17px;font-weight:700;color:var(--ink);}
-  .bc .st .v small{font-size:11px;color:#8590a0;font-weight:400;}
-  .bc .cg{width:100%;font-size:11.5px;color:#8590a0;margin-top:1px;}
-  .bc .cg b{font-weight:700;} .bc .cg .g{color:#00a854;} .bc .cg .a{color:#fa8c16;}
-  .bc .halls{width:100%;margin-top:6px;display:flex;align-items:flex-start;gap:8px;}
-  .bc .halls .hcs{flex:1;min-width:0;display:flex;flex-wrap:wrap;gap:6px;}
-  .bc .halls .hl{font-size:11px;color:var(--mut);font-weight:700;display:flex;align-items:center;gap:4px;flex-shrink:0;padding-top:2px;}
-  .bc .halls .hl i{font-size:13px;color:var(--gold);}
-  .bc .halls .hl b{color:#46505f;font-weight:700;margin-left:1px;}
-  .bc .halls .hc{font-size:11px;background:#f4f6f9;border:1px solid #e6eaf0;border-radius:8px;padding:2px 9px;color:#5a6473;white-space:nowrap;}
-  .bc .halls .hc b{color:#1a2233;font-weight:700;margin-left:4px;}
-  .bc .halls .wait{font-size:11px;color:#aab2bf;font-style:italic;}
-  .bc .go{margin:0 12px;display:flex;align-items:center;gap:6px;background:var(--navy);color:#fff;font-size:12.5px;font-weight:700;padding:10px 14px;border-radius:9px;flex-shrink:0;}
-  .bc .go i{color:var(--gold2);font-size:15px;}
-  .ft{text-align:center;padding:15px;font-size:11px;color:var(--mut);border-top:1px solid var(--line);line-height:1.7;}
-  .contact{text-align:center;margin:16px 16px 4px;background:#fff;border:1px solid #e6e9ef;border-left:4px solid #b5903f;border-radius:11px;padding:13px 16px;font-size:14px;color:#1d2230;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 1px 6px rgba(29,34,48,.05);}
-  .contact i{font-size:20px;color:#b5903f;}
-  .contact b{color:#b5903f;font-weight:800;}
-  .ft b{color:var(--sub);}
-  .alert{margin:14px 16px 0;background:#1a2233;border:none;border-radius:11px;padding:13px 16px;display:flex;align-items:center;gap:11px;cursor:pointer;width:calc(100% - 32px);text-align:left;transition:.12s;font-family:inherit;}
-  .alert:hover{background:#232c40;} .alert:active{transform:scale(.99);}
-  .alert i{font-size:24px;color:#d8b25f;flex-shrink:0;}
-  .alert .tx{font-size:15px;font-weight:700;color:#fff;line-height:1.4;flex:1;}
-  .alert .tx small{display:block;font-weight:400;font-size:11.5px;color:#9fb0cf;margin-top:2px;}
-  .alert .arr{font-size:20px;color:#9fb0cf;flex-shrink:0;}
-  @media(max-width:520px){
-    .tots{flex-direction:column;}
-    .hd h1{font-size:17px;}
-    .bc .name{width:66px;font-size:13.5px;}
-    .bc .mid{gap:12px;padding:10px;}
-    .bc .go{margin:0 10px;padding:9px 11px;}
-    .bc .go span{display:none;}
+  .chgnew{font-size:9.5px;font-weight:800;color:#fff;background:var(--gold);border-radius:5px;padding:1px 6px;margin-left:2px;}
+  .chgday>.cbody{display:none;padding-top:3px;}
+  .chgday.open>.cbody{display:block;}
+  .chgi{font-size:12.5px;color:#485064;margin-top:5px;padding-left:3px;font-weight:500;line-height:1.5;}
+  .chgi b{color:var(--ink);font-weight:800;}
+
+  /* contact + footer */
+  .contact{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);
+    border-radius:14px;padding:14px 16px;text-align:center;font-size:14px;font-weight:700;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:var(--shadow2);}
+  .contact i{font-size:20px;color:var(--gold);} .contact b{color:var(--gold);font-weight:900;}
+  .foot{text-align:center;font-size:11px;color:var(--mut);padding:6px 0 10px;font-weight:600;line-height:1.7;}
+  .foot b{color:var(--sub);}
+
+  /* ===== RESPONSIVE ===== */
+  @media(min-width:760px){
+    .branchgrid .bc:hover{transform:translateY(-3px);}
+  }
+  @media(max-width:759px){
+    body{padding:12px;}
+    .page{gap:13px;}
+    .grid2,.grid-wx{grid-template-columns:1fr;}
+    .head{padding:18px 18px;}
+    .brand .tt .wm{font-size:20px;}
+    .brand .mk{width:42px;height:42px;font-size:22px;}
+    .tots{flex-direction:column;min-width:100%;}
+    .pricecols{grid-template-columns:1fr;gap:12px;}
+    .branchgrid{grid-template-columns:1fr;}
+  }
+  @media(max-width:420px){
+    .bc .stats{gap:12px;}
+    .wxrow{gap:6px;}
+    .wxc{padding:9px 6px;}
   }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="page">
 
-  <div class="hd">
-    <div class="hdate"><i class="ti ti-circle-check-filled"></i> 최신 갱신 · <span id="hd">7/5(일)</span></div>
-    <div class="hcenter">
-      <div class="hci"><i class="ti ti-tools-kitchen-2"></i></div>
-      <div class="wm">VILLA <span class="de">DE</span> GD</div>
-      <div class="hcline"></div>
-      <div class="hcsub">조리부 발주서 · 5개 지점</div>
+  <!-- HEADER -->
+  <header class="head">
+    <div class="top">
+      <div class="brand">
+        <div class="mk"><i class="ti ti-tools-kitchen-2"></i></div>
+        <div class="tt">
+          <div class="wm">VILLA <span class="de">DE</span> GD</div>
+          <div class="sub">조리부 발주서 · 5개 지점</div>
+        </div>
+      </div>
+      <div class="updated">
+        <div class="u1"><i class="ti ti-circle-check-filled"></i> 최신 갱신</div>
+        <div class="u2"><span id="hd">7/10(금)</span></div>
+      </div>
     </div>
-  </div>
+    <div class="goldbar"></div>
+  </header>
 
+  <!-- REFRESH -->
+  <button class="refresh" onclick="location.href=location.pathname+'?t='+Date.now()">
+    <i class="ti ti-refresh lead"></i>
+    <div class="tx">최신으로 업데이트<small>발주서 받기 전에 한 번 누르세요 — 항상 최신본으로 새로고침됩니다</small></div>
+    <i class="ti ti-chevron-right arr"></i>
+  </button>
 
-  <button class="alert" onclick="location.href=location.pathname+'?t='+Date.now()"><i class="ti ti-refresh"></i><div class="tx">최신으로 업데이트<small>발주서 받기 전에 한 번 누르세요 — 항상 최신본으로 새로고침됩니다</small></div><i class="ti ti-chevron-right arr"></i></button>
+  <!-- BRANCH DOWNLOADS (TOP) -->
+  <section>
+    <div class="sec-h"><i class="ti ti-download"></i> 지점별 발주서 — 눌러서 받으세요</div>
+    <div class="branchgrid">
+      <div class="tipbar"><i class="ti ti-bookmark"></i><span>이 포털 주소를 <b>크롬 바로가기(즐겨찾기)</b>에 추가해 두고 쓰세요 — 열 때마다 <b>자동으로 최신 발주서</b>로 업데이트됩니다.</span><span class="url"><i class="ti ti-link"></i>muninhee22-ui.github.io/balju</span></div>
 
-  <div class="sec">
-    <div class="sec-t"><i class="ti ti-calendar-heart"></i> 다음 주말 행사 · 5개 지점 토탈 <span class="tag">웨딩프로 자동집계</span></div>
+      <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1X3fqJkT5NuvZghruYHl_kNE8Bg-5IQwC" target="_blank" rel="noopener">
+        <div class="body">
+          <div class="nm"><b style="color:var(--ansan)">안산점</b><small>ANSAN</small></div>
+          <div class="stats"><div class="stat"><div class="l">토 보증</div><div class="v">1,550<small>명</small></div></div><div class="stat"><div class="l">일 보증</div><div class="v">460<small>명</small></div></div></div>
+          <div class="meta">
+            <span class="mi">신규품목 <b class="g">33</b> · 단가변경 <b class="a">10</b> <em>(전주 대비)</em></span>
+            <span class="mi ev"><i class="ti ti-building-store"></i>예식 <b>토8·일3</b></span>
+            <span class="hc">그랜드볼룸<b>토2·일1</b></span><span class="hc">그랜드컨벤션<b>토2·일1</b></span><span class="hc">7층그레이스<b>토4·일1</b></span>
+          </div>
+        </div>
+        <div class="dl"><i class="ti ti-file-spreadsheet"></i> 엑셀 받기</div>
+      </a>
+
+      <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1_w47BZhnpxRfH73tbQDjRgyNTEuKG8zU" target="_blank" rel="noopener">
+        <div class="body">
+          <div class="nm"><b style="color:var(--anyang)">안양점</b><small>ANYANG</small></div>
+          <div class="stats"><div class="stat"><div class="l">토 보증</div><div class="v">1,240<small>명</small></div></div><div class="stat"><div class="l">일 보증</div><div class="v">660<small>명</small></div></div></div>
+          <div class="meta">
+            <span class="mi">신규품목 <b class="g">16</b> · 단가변경 <b class="a">6</b> <em>(전주 대비)</em></span>
+            <span class="mi ev"><i class="ti ti-building-store"></i>예식 <b>토6·일3</b></span>
+            <span class="hc">크리스탈캐슬<b>토6·일3</b></span><span class="hc off">갤러리아 예식無</span>
+          </div>
+        </div>
+        <div class="dl"><i class="ti ti-file-spreadsheet"></i> 엑셀 받기</div>
+      </a>
+
+      <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1rDx0YeZWVvgZR11bVkC06iiB9Fg8g1aP" target="_blank" rel="noopener">
+        <div class="body">
+          <div class="nm"><b style="color:var(--suseo)">수서점</b><small>SUSEO</small></div>
+          <div class="stats"><div class="stat"><div class="l">토 보증</div><div class="v">950<small>명</small></div></div><div class="stat"><div class="l">일 보증</div><div class="v">400<small>명</small></div></div></div>
+          <div class="meta">
+            <span class="mi">신규품목 <b class="g">68</b> · 단가변경 <b class="a">2</b> <em>(전주 대비)</em></span>
+            <span class="mi ev"><i class="ti ti-building-store"></i>예식 <b>토4·일2</b></span>
+            <span class="hc">르씨엘 홀<b>토4·일2</b></span>
+          </div>
+        </div>
+        <div class="dl"><i class="ti ti-file-spreadsheet"></i> 엑셀 받기</div>
+      </a>
+
+      <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1pmWZdFGa_6LDs1Fu4RFICBHzCvof1_4x" target="_blank" rel="noopener">
+        <div class="body">
+          <div class="nm"><b style="color:var(--cheongdam)">청담점</b><small>CHEONGDAM</small></div>
+          <div class="stats"><div class="stat"><div class="l">토 보증</div><div class="v">600<small>명</small></div></div><div class="stat"><div class="l">일 보증</div><div class="v">200<small>명</small></div></div></div>
+          <div class="meta">
+            <span class="mi">신규품목 <b class="g">20</b> · 단가변경 <b class="a">4</b> <em>(전주 대비)</em></span>
+            <span class="mi ev"><i class="ti ti-building-store"></i>예식 <b>토3·일1</b></span>
+            <span class="hc">에스파체 앙피레<b>토3·일1</b></span>
+          </div>
+        </div>
+        <div class="dl"><i class="ti ti-file-spreadsheet"></i> 엑셀 받기</div>
+      </a>
+
+      <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1JJUglK5L4nUZRvxgJimn7-uDLRpZPlFB" target="_blank" rel="noopener">
+        <div class="body">
+          <div class="nm"><b style="color:var(--nonhyeon)">논현점</b><small>NONHYEON</small></div>
+          <div class="stats"><div class="stat"><div class="l">토 보증</div><div class="v">620<small>명</small></div></div><div class="stat"><div class="l">일 보증</div><div class="v">150<small>명</small></div></div></div>
+          <div class="meta">
+            <span class="mi">신규품목 <b class="g">20</b> · 단가변경 <b class="a">0</b> <em>(전주 대비)</em></span>
+            <span class="mi ev"><i class="ti ti-building-store"></i>예식 <b>토3·일1</b></span>
+            <span class="hc">그레이스켈리홀<b>토3·일1</b></span>
+          </div>
+        </div>
+        <div class="dl"><i class="ti ti-file-spreadsheet"></i> 엑셀 받기</div>
+      </a>
+
+      <div class="bc mystery">
+        <div class="myst">
+          <div class="q">?</div>
+          <div class="qt">어딜까</div>
+          <div class="qs">COMING SOON</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKEND TOTALS — slim strip -->
+  <section class="card totstrip">
+    <div class="sec-h"><i class="ti ti-calendar-heart"></i> 다음 주말 행사 · 5개 지점 <span class="tag">웨딩프로 집계</span></div>
     <div class="tots">
       <div class="tot sat">
-        <div class="lab"><i class="ti ti-calendar"></i> 토요일 · 7/11</div>
-        <div class="big"><span class="num">4,960</span><span class="myeong">명</span></div>
-        <div class="cnt"><i class="ti ti-users"></i> 보증인원 · <b>행사 24건</b></div>
+        <span class="lab"><i class="ti ti-calendar"></i> 토 7/11</span>
+        <span class="big"><span class="num">4,960</span><span class="myeong">명</span></span>
+        <span class="cnt">행사 <b>24건</b></span>
       </div>
       <div class="tot sun">
-        <div class="lab"><i class="ti ti-calendar"></i> 일요일 · 7/12</div>
-        <div class="big"><span class="num">1,870</span><span class="myeong">명</span></div>
-        <div class="cnt"><i class="ti ti-users"></i> 보증인원 · <b>행사 10건</b></div>
+        <span class="lab"><i class="ti ti-calendar"></i> 일 7/12</span>
+        <span class="big"><span class="num">1,870</span><span class="myeong">명</span></span>
+        <span class="cnt">행사 <b>10건</b></span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="notice">
-    <div class="nt"><i class="ti ti-speakerphone"></i> 알려드립니다</div>
+  <!-- WEATHER + SEASONAL side by side -->
+  <section class="grid2">
+    <div class="card">
+      <div class="sec-h"><i class="ti ti-cloud"></i> 오늘 날씨 · 식중독 지수 <span class="tag live" id="wxtag">실시간</span></div>
+      <div class="wx">
+        <div class="wxrow" id="wxrow">
+          <div class="wxc"><div class="cty">안산</div><div class="ic">⏳</div><div class="tp">–</div><div class="ds">불러오는 중</div></div>
+          <div class="wxc"><div class="cty">안양</div><div class="ic">⏳</div><div class="tp">–</div><div class="ds">불러오는 중</div></div>
+          <div class="wxc"><div class="cty">서울</div><div class="ic">⏳</div><div class="tp">–</div><div class="ds">불러오는 중</div></div>
+        </div>
+        <div class="risk g" id="risk">
+          <div class="lv"><i class="ti ti-shield-check"></i><div class="lt" id="risklt">확인중</div></div>
+          <div class="msg" id="riskmsg">식중독 지수를 계산하고 있습니다…</div>
+        </div>
+        <div class="rules" id="wxrules"></div>
+        <div class="wxnote" id="wxnote">기온 기반 식중독 위험단계 · 참고용</div>
+      </div>
+    </div>
+
+    <!-- SEASONAL PRICE GUIDE -->
+    <div class="card season">
+    <div class="sec-h"><i class="ti ti-leaf"></i> 이번 달 식자재 시세 가이드 <span class="tag">제철 · 시세</span></div>
+    <div class="sh"><span class="mo" id="seasonmo">7월</span><span class="desc" id="seasondesc"></span></div>
+    <div class="pricecols">
+      <div class="pcol cheap">
+        <div class="pt"><i class="ti ti-trending-down"></i> 지금 저렴 · 사기 좋은 (제철)</div>
+        <div class="chips" id="cheapchips"></div>
+      </div>
+      <div class="pcol pricey">
+        <div class="pt"><i class="ti ti-trending-up"></i> 오름세 · 비쌈 (주의·대체 고려)</div>
+        <div class="chips" id="priceychips"></div>
+      </div>
+    </div>
+    <div class="seasonnote" id="seasonnote"></div>
+    <div class="seasonfoot">※ 계절 평균 시세 기준 가이드 — 실제 발주 단가는 <b>발주서(ERP)</b>를 따르세요. 매월 자동 갱신.</div>
+    </div>
+  </section>
+
+  <!-- NOTICE + CHANGELOG -->
+  <section class="card notice">
+    <div class="sec-h"><i class="ti ti-speakerphone"></i> 알려드립니다</div>
     <div class="li"><i class="ti ti-refresh"></i><span>최근 <b>1개월 품목변경·발주</b> 위주로 갱신했습니다.</span></div>
     <div class="li"><i class="ti ti-palette"></i><span>변경 품목은 <b>색상으로 표기</b> — <span class="pill new">신규품목</span> <span class="pill chg">단가변경</span></span></div>
     <div class="li"><i class="ti ti-shopping-cart"></i><span>추가 인터넷 발주는 기존처럼, 업체가 품목 등록하면 <b>이후 자동 표기</b>됩니다.</span></div>
-    <div class="chglog">
-      <div class="chgt"><i class="ti ti-history"></i> 최근 변경</div>
-      <div class="chgday open">
-        <div class="chghd" onclick="toggleDay(this)">2026. 7. 5 <span class="chgnew">최신</span></div>
-        <div class="chgbody">
-          <div class="chgi"><b>[전 지점]</b> ERP <b>최신 발주내역 반영</b> — 최근 발주됐는데 빠져있던 품목 전부 추가 (안산33·안양16·수서68·청담20·논현20개, <b>회색=신규</b> 맨 아래)</div>
+
+    <details class="clog">
+      <summary><i class="ti ti-history h"></i> 변경 이력 보기 <span class="cnt"><i class="ti ti-point-filled" style="font-size:8px;color:var(--gold)"></i> 최근 7. 10</span> <i class="ti ti-chevron-down chev"></i></summary>
+      <div class="clogbody">
+        <div class="chgday open"><div class="chghd" onclick="toggleDay(this)">2026. 7. 10 <span class="chgnew">최신</span></div><div class="cbody">
+          <div class="chgi"><b>[포털 새단장]</b> PC 화면 <b>와이드 3단</b>·모바일 반응형 개편 — 엑셀 받기가 <b>맨 위</b>로</div>
+          <div class="chgi"><b>[신규]</b> 오늘 날씨 · <b>식중독 지수</b>(실시간) + 단계별 위생 실천수칙</div>
+          <div class="chgi"><b>[신규]</b> <b>이번 달 식자재 시세 가이드</b> — 지금 저렴한 제철 vs 오름세 품목, 매월 자동 갱신</div>
+          <div class="chgi"><b>[안내]</b> 포털 주소를 <b>크롬 즐겨찾기</b>에 추가해 두면 항상 최신으로 열립니다</div>
+        </div></div>
+        <div class="chgday"><div class="chghd" onclick="toggleDay(this)">2026. 7. 5</div><div class="cbody">
+          <div class="chgi"><b>[전 지점]</b> ERP <b>최신 발주내역 반영</b> — 빠져있던 최근 발주품목 전부 추가 (안산33·안양16·수서68·청담20·논현20개, <b>회색=신규</b> 맨 아래)</div>
           <div class="chgi"><b>[전 지점]</b> 단가를 ERP <b>최신 단가로 일괄 갱신</b></div>
           <div class="chgi">앞으로 매주 금요일, 그 주 ERP 발주분이 <b>자동으로 발주서에 추가</b>됩니다</div>
-        </div>
-      </div>
-      <div class="chgday">
-        <div class="chghd" onclick="toggleDay(this)">2026. 7. 3</div>
-        <div class="chgbody">
+        </div></div>
+        <div class="chgday"><div class="chghd" onclick="toggleDay(this)">2026. 7. 3</div><div class="cbody">
           <div class="chgi"><b>[전 지점]</b> 다음 주말 <b>7/11~12</b> 행사·보증인원·홀별 갱신</div>
-          <div class="chgi"><b>[전 지점]</b> 미사용 품목 정리 (안산34·안양0·수서25·청담69·논현24개 — 발주이력 있고 재고0인 특수·일회성 품목만)</div>
+          <div class="chgi"><b>[전 지점]</b> 미사용 품목 정리 (발주이력 있고 재고0인 특수·일회성 품목만)</div>
           <div class="chgi"><b>[전 지점]</b> 단가변경 표시를 엑셀과 동일하게 <b>'전주 대비'</b> 기준으로 통일</div>
-          <div class="chgi"><b>[안양]</b> 갤러리아홀 이번 주말 예식 없음 — 크리스탈캐슬홀만</div>
-        </div>
+        </div></div>
+        <div class="chgday"><div class="chghd" onclick="toggleDay(this)">2026. 6. 28</div><div class="cbody">
+          <div class="chgi"><b>[전 지점]</b> 묶음 시트를 <b>업체별 개별 시트</b>로 분리 · 업체명 ERP 공식명으로 통일</div>
+          <div class="chgi"><b>[수서·청담]</b> 베이커리·제과 <b>혜성식품 시트에 연동</b></div>
+        </div></div>
+        <div class="chgday"><div class="chghd" onclick="toggleDay(this)">2026. 6. 25 ~ 6. 21</div><div class="cbody">
+          <div class="chgi">· 홀별 예식 건수 표기 · 재고입력 시트 추가 · 미사용 품목 정리 · 발주일자 자동 · 아이콘 추가</div>
+        </div></div>
       </div>
-      <div class="chgday">
-        <div class="chghd" onclick="toggleDay(this)">2026. 6. 28</div>
-        <div class="chgbody">
-          <div class="chgi"><b>[전 지점]</b> 묶음 시트(기타발주·대림+바다)를 <b>업체별 개별 시트</b>로 분리</div>
-          <div class="chgi"><b>[전 지점]</b> 업체 이름을 <b>ERP 공식 거래처명</b>으로 통일 (예: 한들팜→한들유통, 씨엔지밴딩→씨앤지벤딩주식회사, 마블플러스→마블플러스원)</div>
-          <div class="chgi"><b>[전 지점]</b> <b>재고입력</b> 시트 — 거래처PK 빠진 곳 모두 채움 (ERP 그대로 가져오기)</div>
-          <div class="chgi"><b>[수서·청담]</b> 베이커리·제과 <b>전 품목을 혜성식품 시트에 연동</b> — 제과 시트에 발주·재고를 입력하면 혜성식품 시트에 자동 반영. <b>ERP 발주·재고는 혜성식품 시트 하나로</b> 하세요</div>
-          <div class="chgi"><b>[수서·청담]</b> <b>발주요약</b> — 베이커리·제과는 "혜성식품 연동 · 총합 미적용"으로 별도 표기 (총합계는 혜성식품으로만 집계)</div>
-          <div class="chgi"><b>[전 지점]</b> 단가변경 빨강 박스 = <b>전주(지난주) 기준</b> 변경분만 표시</div>
-        </div>
-      </div>
-      <div class="chgday">
-        <div class="chghd" onclick="toggleDay(this)">2026. 6. 27</div>
-        <div class="chgbody">
-          <div class="chgi">· 발주서 <b>세로형 인쇄</b>로 변경</div>
-          <div class="chgi">· 혜성식품(제과·베이커리) 금액 <b>혜성식품으로 통합</b> 집계 (같은 업체)</div>
-          <div class="chgi">· 미사용 품목 정리 기준 <b>1개월</b>로</div>
-          <div class="chgi">· 청담 혜성식품 <b>중복품목 정리</b> (담당자 요청 반영)</div>
-          <div class="chgi">· 재고입력 → <b>ERP 재고실사 양식</b> (거래처PK·재고합계금액 추가)</div>
-        </div>
-      </div>
-      <div class="chgday">
-        <div class="chghd" onclick="toggleDay(this)">2026. 6. 25</div>
-        <div class="chgbody">
-          <div class="chgi">· 다음 주말 <b>7/4~5</b> 행사·보증인원·홀별 갱신</div>
-          <div class="chgi">· <b>홀별 예식 건수</b> 5개 지점 모두 채움 (홀 이름별 토/일)</div>
-          <div class="chgi">· 지점 카드 <b>홀 칩</b>으로 정리 — 깔끔하게</div>
-          <div class="chgi">· 인터넷·바탕화면 <b>아이콘</b> 추가 (빨간 발주서)</div>
-        </div>
-      </div>
-      <div class="chgday">
-        <div class="chghd" onclick="toggleDay(this)">2026. 6. 21</div>
-        <div class="chgbody">
-          <div class="chgi">· 3개월 미사용 품목 정리</div>
-          <div class="chgi">· 신규품목 <b>가나다순</b>으로 맨 아래 정렬</div>
-          <div class="chgi">· 한들팜에 <b>입고요청</b> 칸 추가</div>
-          <div class="chgi">· <b>재고입력 시트</b> 추가 — 모든 업체 재고 한눈에</div>
-          <div class="chgi">· 수서 베이커리-혜성 → <b>혜성(베이커리)</b> 금액 별도 + 추가입력 메모 분리</div>
-          <div class="chgi">· 표지에 <b>홀별 예식 건수</b>(토/일) 추가</div>
-          <div class="chgi">· 수서 <b>지엔에프에스</b> 업체 제외</div>
-          <div class="chgi">· 품번 빈 칸 있는 시트에 <b>사유 안내</b> 표시</div>
-          <div class="chgi">· <b>발주일자 자동</b> — 파일 여는 날짜로 표시</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="branches">
-    <div class="bt">지점별 발주서 — 눌러서 받으세요</div>
-    <div class="tip"><i class="ti ti-mouse"></i><span>혹시 <b>구글 드라이브 화면</b>이 뜨면 → 마우스 <b>오른쪽 클릭 → 다운로드</b>를 눌러 엑셀로 받으세요.</span></div>
-
-    <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1X3fqJkT5NuvZghruYHl_kNE8Bg-5IQwC" target="_blank" rel="noopener">
-      <div class="name" style="background:var(--ansan)"><span>안산점</span><small>ANSAN</small></div>
-      <div class="mid">
-        <div class="st"><div class="l">토 보증</div><div class="v">1,550<small>명</small></div></div>
-        <div class="st"><div class="l">일 보증</div><div class="v">460<small>명</small></div></div>
-        <div class="cg">신규품목 <b class="g">33</b> · 단가변경 <b class="a">10</b> <span style="color:#aab2bf">(전주 대비)</span></div>
-        <div class="halls"><span class="hl"><i class="ti ti-building-store"></i>예식 <b>토8·일3</b></span><div class="hcs"><span class="hc">그랜드볼룸<b>토2·일1</b></span><span class="hc">그랜드컨벤션<b>토2·일1</b></span><span class="hc">7층그레이스<b>토4·일1</b></span></div></div>
-      </div>
-      <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
-    </a>
-
-    <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1_w47BZhnpxRfH73tbQDjRgyNTEuKG8zU" target="_blank" rel="noopener">
-      <div class="name" style="background:var(--anyang)"><span>안양점</span><small>ANYANG</small></div>
-      <div class="mid">
-        <div class="st"><div class="l">토 보증</div><div class="v">1,240<small>명</small></div></div>
-        <div class="st"><div class="l">일 보증</div><div class="v">660<small>명</small></div></div>
-        <div class="cg">신규품목 <b class="g">16</b> · 단가변경 <b class="a">6</b> <span style="color:#aab2bf">(전주 대비)</span></div>
-        <div class="halls"><span class="hl"><i class="ti ti-building-store"></i>예식 <b>토6·일3</b></span><div class="hcs"><span class="hc">크리스탈캐슬<b>토6·일3</b></span><span class="hc" style="color:#aab2bf">갤러리아 예식無</span></div></div>
-      </div>
-      <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
-    </a>
-
-    <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1rDx0YeZWVvgZR11bVkC06iiB9Fg8g1aP" target="_blank" rel="noopener">
-      <div class="name" style="background:var(--suseo)"><span>수서점</span><small>SUSEO</small></div>
-      <div class="mid">
-        <div class="st"><div class="l">토 보증</div><div class="v">950<small>명</small></div></div>
-        <div class="st"><div class="l">일 보증</div><div class="v">400<small>명</small></div></div>
-        <div class="cg">신규품목 <b class="g">68</b> · 단가변경 <b class="a">2</b> <span style="color:#aab2bf">(전주 대비)</span></div>
-        <div class="halls"><span class="hl"><i class="ti ti-building-store"></i>예식 <b>토4·일2</b></span><div class="hcs"><span class="hc">르씨엘 홀</span></div></div>
-      </div>
-      <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
-    </a>
-
-    <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1pmWZdFGa_6LDs1Fu4RFICBHzCvof1_4x" target="_blank" rel="noopener">
-      <div class="name" style="background:var(--cheongdam)"><span>청담점</span><small>CHEONGDAM</small></div>
-      <div class="mid">
-        <div class="st"><div class="l">토 보증</div><div class="v">600<small>명</small></div></div>
-        <div class="st"><div class="l">일 보증</div><div class="v">200<small>명</small></div></div>
-        <div class="cg">신규품목 <b class="g">20</b> · 단가변경 <b class="a">4</b> <span style="color:#aab2bf">(전주 대비)</span></div>
-        <div class="halls"><span class="hl"><i class="ti ti-building-store"></i>예식 <b>토3·일1</b></span><div class="hcs"><span class="hc">에스파체 앙피레</span></div></div>
-      </div>
-      <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
-    </a>
-
-    <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1JJUglK5L4nUZRvxgJimn7-uDLRpZPlFB" target="_blank" rel="noopener">
-      <div class="name" style="background:var(--nonhyeon)"><span>논현점</span><small>NONHYEON</small></div>
-      <div class="mid">
-        <div class="st"><div class="l">토 보증</div><div class="v">620<small>명</small></div></div>
-        <div class="st"><div class="l">일 보증</div><div class="v">150<small>명</small></div></div>
-        <div class="cg">신규품목 <b class="g">20</b> · 단가변경 <b class="a">0</b> <span style="color:#aab2bf">(전주 대비)</span></div>
-        <div class="halls"><span class="hl"><i class="ti ti-building-store"></i>예식 <b>토3·일1</b></span><div class="hcs"><span class="hc">그레이스켈리홀</span></div></div>
-      </div>
-      <div class="go"><i class="ti ti-file-spreadsheet"></i><span>엑셀 받기</span></div>
-    </a>
-
-  </div>
+    </details>
+  </section>
 
   <div class="contact"><i class="ti ti-headset"></i><span>문의사항은 <b>문승호 이사</b>에게 문의하세요</span></div>
-  <div class="ft"><b>빌라드지디 조리부</b> · 본사 관리 · 매주 금요일 갱신</div>
+  <div class="foot"><b>빌라드지디 조리부</b> · 본사 관리 · 매주 금요일 갱신</div>
 </div>
-<script>function toggleDay(el){el.parentElement.classList.toggle('open');}
-(function(){var d=new Date(document.lastModified),D=['일','월','화','수','목','금','토'],e=document.getElementById('hd');if(e&&!isNaN(d.getTime()))e.textContent=(d.getMonth()+1)+'/'+d.getDate()+'('+D[d.getDay()]+')';})();</script>
+
+<script>
+function toggleDay(el){el.parentElement.classList.toggle('open');}
+
+/* 최신 갱신 날짜 = 파일 최종수정일 자동 */
+(function(){var d=new Date(document.lastModified),D=['일','월','화','수','목','금','토'],e=document.getElementById('hd');
+  if(e&&!isNaN(d.getTime()))e.textContent=(d.getMonth()+1)+'/'+d.getDate()+'('+D[d.getDay()]+')';})();
+
+/* ===== 이번 달 식자재 시세 가이드 (월별 자동) ===== */
+const SEASON={
+ 1:{d:'한겨울 · 저장채소 위주',cheap:['배추','무','대파','시금치','굴','과메기','명태','귤'],up:['애호박','오이','상추','토마토','딸기(초)'],pts:['하우스 잎채소·과채류(오이·애호박·상추) 값 연중 최고 — 국·조림·저장채소 중심 식단이 원가에 유리','배추·무 저장물량 풍부 — 김치·국거리 원가 안정기','굴·명태 등 겨울 수산물 제철 — 신선도 좋고 단가 낮아 적극 활용','한파 예보 시 채소값 급등 — 주간 시세 확인 후 발주량 조절','노로바이러스 유행기 — 생굴·조개류 취급 후 손·도구 소독 철저']},
+ 2:{d:'환절기 · 봄나물 시작',cheap:['시금치','냉이','달래','미나리','명태','꼬막','딸기'],up:['오이','애호박','상추','파프리카'],pts:['봄나물(냉이·달래·미나리) 출하 시작 — 무침·국 메뉴 전환 적기','겨울 시금치 끝물 — 단맛 좋고 저렴, 적극 활용','과채류 여전히 고가 — 대체 채소 유지','냉동·건조 재고 정리하고 봄 식자재 전환 준비']},
+ 3:{d:'초봄 · 봄나물 성수',cheap:['달래','냉이','두릅','쑥','바지락','주꾸미','딸기'],up:['무','배추','대파','오이'],pts:['주꾸미·바지락 제철 절정 — 해물 메뉴 원가 유리','봄나물 값 안정 — 두릅·쑥 계절메뉴 추천','겨울 저장 무·배추 품질 하락 시작 — 입고 검수 강화','일교차 큰 시기 — 배송 식자재 상온 방치 주의']},
+ 4:{d:'봄 · 나물·해산물 풍성',cheap:['봄동','미나리','두릅','참나물','주꾸미','바지락','딸기'],up:['무','당근','양파(전년)'],pts:['봄나물 절정 — 참나물·미나리·봄동 저렴, 봄 코스 구성 적기','딸기 끝물 단가 상승 — 후식 과일 교체 검토','햇양파 출하 전 저장양파 가격 상승 주의','기온 상승 시작 — 냉장고 온도 점검 시즌 개시']},
+ 5:{d:'초여름 · 과채류 시작',cheap:['양파(햇)','마늘종','부추','아스파라거스','참외','오이','상추'],up:['시금치','대파','무'],pts:['햇양파·마늘종 출하 — 단가 하락, 대량 사용 메뉴에 유리','참외·수박 초물 — 당도 확인 후 후식 도입','잎채소 서서히 오름세 — 6월 장마 전 가격 선반영 시작','기온 25° 넘는 날부터 식중독 주의 — 위생수칙 재점검']},
+ 6:{d:'초여름 · 과채 풍성',cheap:['감자(햇)','애호박','오이','가지','참외','수박','옥수수','풋고추'],up:['시금치','상추','깻잎','대파'],pts:['햇감자·참외·수박 제철 — 저렴하고 품질 좋음','장마 직전 잎채소 가격 오르기 시작 — 필요분 선구매·소분 냉장','금어기 품목 확인 — 대체 어종 미리 준비','본격 무더위 전 냉장·냉동고 성능 점검 필수']},
+ 7:{d:'한여름 · 장마철',cheap:['애호박','오이','가지','열무','옥수수','수박','참외','복숭아','자두','풋고추'],up:['상추','깻잎','시금치','대파','무','딸기(끝)'],pts:['장마철 잎채소(상추·깻잎·시금치) 값 급등 + 짓무름 잦음 — 입고 즉시 검수, 상한 잎 바로 폐기','대파·무 오름세 지속 — 열무·애호박·가지 등 여름채소로 메뉴 대체가 원가에 유리','복숭아·자두·수박·참외 제철 단가 저점 — 후식·화채 활용 적기','고온다습 = 세균 번식 최적기 — 조리 후 2시간 내 냉장, 교차오염 관리 철저','건자재(가루·건어물·견과)도 습기 곰팡이 주의 — 밀폐·제습 보관']},
+ 8:{d:'늦여름 · 폭염·태풍',cheap:['가지','애호박','옥수수','포도','복숭아','자두','수박','고등어'],up:['상추','시금치','무','배추','대파','오이'],pts:['폭염·태풍으로 채소 수급 연중 최악 — 잎채소 급등 반복, 냉동·건조 대체 적극 활용','태풍 예보 뜨면 2~3일치 선발주 — 지나면 가격 급등','포도·복숭아 절정 — 후식 원가 유리','식중독 최다 발생月 — 보존식·중심온도 기록 빠짐없이','정전 대비 냉동고 개폐 최소화 수칙 공유']},
+ 9:{d:'초가을 · 환절기',cheap:['새우','전어','고등어','사과','배','포도','밤','고구마','호박'],up:['상추','시금치','대파','오이'],pts:['전어·대하 제철 시작 — 가을 별미 메뉴 도입 적기','햇사과·배·포도 풍성 — 후식 단가 하락','추석 전후 육류·나물류 가격 급등 — 연휴 1~2주 전 선발주','아침저녁 선선해도 한낮은 식중독 위험 여전 — 방심 금지']},
+ 10:{d:'가을 · 수확철',cheap:['배추','무','사과','배','대하','꽃게','고구마','버섯','단호박'],up:['오이','애호박','파프리카','딸기(초)'],pts:['김장 前 배추·무 가격 저점 — 국·찜 메뉴 원가 유리','대하·꽃게 제철 절정 — 연회 해물 메뉴 추천','버섯·단호박·고구마 수확철 — 가을 코스 구성 적기','일교차 커지는 시기 — 냉장 배송 온도 확인 습관화']},
+ 11:{d:'늦가을 · 김장철',cheap:['배추','무','대파','굴','과메기','사과','귤','고구마'],up:['애호박','오이','상추','토마토'],pts:['김장철 — 배추·무·대파·갓 물량 최대, 연중 최저가','굴 제철 시작 — 생굴 요리 도입 적기','과채류 하우스 전환으로 가격 상승 시작 — 겨울 식단 전환 준비','노로바이러스 시즌 개시 — 생굴·조개류 취급 각별 주의']},
+ 12:{d:'겨울 · 저장채소',cheap:['배추','무','시금치','굴','명태','귤','고구마','대파'],up:['애호박','오이','상추','파프리카','딸기'],pts:['연말 연회 성수기 — 주요 식자재 1~2주 전 선발주 필수','하우스 과채류 고가 — 저장·뿌리채소 중심 식단이 원가 유리','굴·명태·과메기 제철 — 겨울 별미 활용','노로바이러스 유행 절정 — 조개류 가열 철저·손 위생 강화']}
+};
+(function(){
+  var m=(new Date(document.lastModified)).getMonth()+1; if(isNaN(m))m=(new Date()).getMonth()+1;
+  var s=SEASON[m]||SEASON[7];
+  document.getElementById('seasonmo').textContent=m+'월';
+  document.getElementById('seasondesc').textContent=s.d;
+  document.getElementById('seasonnote').innerHTML='<div class="snt"><i class="ti ti-bulb"></i>이번 달 포인트 — 꼭 읽어주세요</div><ul>'+s.pts.map(function(p){return '<li>'+p+'</li>';}).join('')+'</ul>';
+  var cc=document.getElementById('cheapchips'),pc=document.getElementById('priceychips');
+  s.cheap.forEach(function(x){var e=document.createElement('span');e.className='chip dn';e.innerHTML='<i class="ti ti-arrow-down-right"></i>'+x;cc.appendChild(e);});
+  s.up.forEach(function(x){var e=document.createElement('span');e.className='chip up';e.innerHTML='<i class="ti ti-arrow-up-right"></i>'+x;pc.appendChild(e);});
+})();
+
+/* ===== 날씨 (Open-Meteo · 무료·CORS) + 식중독 위험단계 ===== */
+(function(){
+  var CITIES=[{k:'안산',la:37.32,lo:126.83},{k:'안양',la:37.39,lo:126.95},{k:'서울',la:37.49,lo:127.06}];
+  var WMO={0:['☀️','맑음'],1:['🌤️','대체로 맑음'],2:['⛅','구름 조금'],3:['☁️','흐림'],45:['🌫️','안개'],48:['🌫️','짙은 안개'],51:['🌦️','약한 이슬비'],53:['🌦️','이슬비'],55:['🌧️','강한 이슬비'],61:['🌦️','약한 비'],63:['🌧️','비'],65:['🌧️','강한 비'],71:['🌨️','약한 눈'],73:['🌨️','눈'],75:['❄️','강한 눈'],80:['🌦️','소나기'],81:['🌧️','소나기'],82:['⛈️','강한 소나기'],95:['⛈️','뇌우'],96:['⛈️','뇌우·우박'],99:['⛈️','강한 뇌우']};
+  function level(t,h){ // 기온·습도 기반 식중독 위험 단계
+    var s=t; if(h>=80&&t>=25)s+=2;
+    if(s>=33)return['r','ti-alert-triangle-filled','위험','<b>위험</b> — 상온 방치 시 <b>1~2시간</b>내 부패 가능. 조리 후 즉시 냉장, 재가열 철저, 날음식 각별 주의.'];
+    if(s>=28)return['o','ti-flame','경고','<b>경고</b> — 식재료 <b>상온 노출 최소화</b>. 냉장·냉동 온도 점검, 조리도구 교차오염 주의.'];
+    if(s>=23)return['y','ti-alert-circle','주의','<b>주의</b> — 여름철 진입. 냉장보관·유통기한·손 위생 신경 쓰세요.'];
+    return['g','ti-shield-check','관심','<b>관심</b> — 위험 낮음. 기본 위생수칙(손 씻기·냉장보관) 유지.'];
+  }
+  var RULES={ // 단계별 조리부 실천수칙 (경고 전달용)
+   r:[['hot','<b>상온 방치 절대 금지</b> — 조리 후 <b>1시간 내</b> 냉장(5°C↓) 또는 온장(60°C↑) 보관'],
+      ['hot','실온에 <b>2시간 이상</b> 둔 음식은 아깝더라도 <b>과감히 폐기</b> — 재가열로 독소는 안 없어집니다'],
+      ['','날음식·해산물 취급 후 <b>손·칼·도마 즉시 세척·소독</b> — 교차오염이 식중독 1위 원인'],
+      ['','배식 전 <b>중심온도 75°C 이상</b> 재가열 확인 · 보존식 채취 잊지 마세요']],
+   o:[['hot','조리 후 <b>2시간 내 냉장</b> — 상온 노출 최소화, 카트 위 방치 금지'],
+      ['','<b>칼·도마 용도별 구분</b>(육류/어패류/채소) · 행주 매일 삶아 소독'],
+      ['','냉장 <b>5°C 이하</b>·냉동 <b>-18°C 이하</b> 유지 확인 — 온도 기록 철저'],
+      ['','해동은 반드시 <b>냉장해동</b> — 실온·물해동 금지']],
+   y:[['','<b>손 씻기 30초</b> — 조리 전·화장실 후·날음식 취급 후 반드시'],
+      ['','냉장·냉동고 온도 점검 · <b>유통기한 선입선출</b> 습관화'],
+      ['','조리도구 소독·행주 교체 주기 지키기']],
+   g:[['','기본 위생수칙 유지 — <b>손 씻기 · 냉장보관 · 도구 소독</b>'],
+      ['','주 1회 냉장고 정리·온도 점검으로 충분합니다']]};
+  function renderRules(k){
+    var box=document.getElementById('wxrules'); box.innerHTML='';
+    (RULES[k]||RULES.y).forEach(function(r){
+      var d=document.createElement('div'); d.className='rule'+(r[0]?' '+r[0]:'');
+      d.innerHTML='<i class="ti '+(r[0]==='hot'?'ti-alert-triangle':'ti-checkbox')+'"></i><span>'+r[1]+'</span>';
+      box.appendChild(d);
+    });
+  }
+  var url='https://api.open-meteo.com/v1/forecast?timezone=Asia%2FSeoul&current=temperature_2m,relative_humidity_2m,weather_code&latitude='+CITIES.map(c=>c.la).join(',')+'&longitude='+CITIES.map(c=>c.lo).join(',');
+  fetch(url).then(r=>r.json()).then(function(res){
+    var arr=Array.isArray(res)?res:[res];
+    var row=document.getElementById('wxrow');row.innerHTML='';
+    var maxT=-99,maxH=0;
+    arr.forEach(function(d,i){
+      var cur=d.current||{},t=Math.round(cur.temperature_2m),h=Math.round(cur.relative_humidity_2m),w=WMO[cur.weather_code]||['🌡️',''];
+      if(cur.temperature_2m>maxT){maxT=cur.temperature_2m;maxH=h;}
+      var c=document.createElement('div');c.className='wxc';
+      c.innerHTML='<div class="cty">'+CITIES[i].k+'</div><div class="ic">'+w[0]+'</div><div class="tp">'+t+'°</div><div class="ds">'+w[1]+'</div><div class="hu">습도 '+h+'%</div>';
+      row.appendChild(c);
+    });
+    var lv=level(maxT,maxH),rk=document.getElementById('risk');
+    rk.className='risk '+lv[0];
+    document.querySelector('#risk .lv i').className='ti '+lv[1];
+    document.getElementById('risklt').textContent=lv[2];
+    document.getElementById('riskmsg').innerHTML=lv[3];
+    renderRules(lv[0]);
+    document.getElementById('wxnote').textContent='기온 기반 식중독 위험단계 · 오늘 최고 '+Math.round(maxT)+'° 기준 · 참고용';
+  }).catch(function(){
+    document.getElementById('wxtag').textContent='오프라인';
+    document.getElementById('wxtag').classList.remove('live');
+    document.getElementById('wxrow').innerHTML='<div class="wxc" style="flex:1"><div class="ds">날씨 정보를 불러오지 못했습니다. 인터넷 연결 후 새로고침 해주세요.</div></div>';
+    var rk=document.getElementById('risk');rk.className='risk y';
+    document.querySelector('#risk .lv i').className='ti ti-alert-circle';
+    document.getElementById('risklt').textContent='여름';
+    document.getElementById('riskmsg').innerHTML='<b>여름철 주의</b> — 냉장보관·유통기한·손 위생을 기본으로 지켜주세요.';
+    renderRules('o');
+    document.getElementById('wxnote').textContent='계절 기준 안내 · 참고용';
+  });
+})();
+</script>
 </body>
 </html>
