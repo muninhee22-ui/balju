@@ -82,6 +82,8 @@
   .bc .stats{display:flex;gap:18px;margin-top:11px;}
   .bc .stat .l{font-size:10.5px;color:var(--mut);font-weight:700;}
   .bc .stat .l .dt{font-size:9.5px;font-weight:800;color:var(--gold);background:var(--goldsoft);border-radius:5px;padding:1px 5px;margin-left:3px;letter-spacing:.2px;}
+  .bc .stat .l .dt.wd{color:#0d7c47;background:#e3f5ec;}
+  .bc .stat.wd .v{color:#0d8f52;}
   .bc .stat .v{font-size:18px;font-weight:800;line-height:1.15;}
   .bc .stat .v small{font-size:11px;color:#8590a4;font-weight:600;}
   .bc .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:10px;}
@@ -129,7 +131,8 @@
   .tot .lab{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:800;color:#aeb8cf;white-space:nowrap;}
   .tot .big{display:flex;align-items:baseline;gap:2px;}
   .tot .num{font-size:20px;font-weight:800;line-height:1;}
-  .tot.sat .num{color:var(--gold2);} .tot.sun .num{color:#82b4ee;}
+  .tot.sat .num{color:var(--gold2);} .tot.sun .num{color:#82b4ee;} .tot.wd .num{color:#7fd6a3;}
+  .tot.wd .lab i{color:#7fd6a3;}
   .tot .myeong{font-size:11.5px;font-weight:800;color:#cdd5e6;}
   .tot .cnt{font-size:11px;color:#9aa4bc;font-weight:600;white-space:nowrap;}
   .tot .cnt b{color:#fff;}
@@ -305,11 +308,11 @@
       <a class="bc" href="https://drive.google.com/uc?export=download&amp;id=1rDx0YeZWVvgZR11bVkC06iiB9Fg8g1aP" target="_blank" rel="noopener">
         <div class="body">
           <div class="nm"><b style="color:var(--suseo)">수서점</b><small>SUSEO</small></div>
-          <div class="stats"><div class="stat"><div class="l">토 보증 <span class="dt">7/18</span></div><div class="v">770<small>명</small></div></div><div class="stat"><div class="l">일 보증 <span class="dt">7/19</span></div><div class="v">200<small>명</small></div></div></div>
+          <div class="stats"><div class="stat"><div class="l">토 보증 <span class="dt">7/18</span></div><div class="v">770<small>명</small></div></div><div class="stat"><div class="l">일 보증 <span class="dt">7/19</span></div><div class="v">200<small>명</small></div></div><div class="stat wd"><div class="l">평일 <span class="dt wd">금 7/17</span></div><div class="v">530<small>명</small></div></div></div>
           <div class="meta">
             <span class="mi">신규품목 <b class="g">4</b> · 단가변경 <b class="a">5</b> <em>(전주 대비)</em></span>
-            <span class="mi ev"><i class="ti ti-building-store"></i>예식 <b>토4·일1</b></span>
-            <span class="hc">르씨엘 홀<b>토4·일1</b></span>
+            <span class="mi ev"><i class="ti ti-building-store"></i>예식 <b>토4·일1·금3</b></span>
+            <span class="hc">르씨엘 홀<b>토4·일1·금3</b></span>
           </div>
         </div>
         <div class="dl"><i class="ti ti-file-spreadsheet"></i> 엑셀 받기</div>
@@ -353,7 +356,7 @@
 
   <!-- WEEKEND TOTALS — slim strip -->
   <section class="card totstrip">
-    <div class="sec-h"><i class="ti ti-calendar-heart"></i> 다음 주말 행사 · 5개 지점 <span class="tag">웨딩프로 집계</span></div>
+    <div class="sec-h"><i class="ti ti-calendar-heart"></i> 다음 주 행사 · 5개 지점 <span class="tag">웨딩프로 집계</span></div>
     <div class="tots">
       <div class="tot sat">
         <span class="lab"><i class="ti ti-calendar"></i> 토 7/18</span>
@@ -364,6 +367,11 @@
         <span class="lab"><i class="ti ti-calendar"></i> 일 7/19</span>
         <span class="big"><span class="num">400</span><span class="myeong">명</span></span>
         <span class="cnt">행사 <b>2건</b></span>
+      </div>
+      <div class="tot wd">
+        <span class="lab"><i class="ti ti-calendar-event"></i> 평일 금 7/17</span>
+        <span class="big"><span class="num">530</span><span class="myeong">명</span></span>
+        <span class="cnt">행사 <b>3건</b></span>
       </div>
     </div>
   </section>
@@ -417,6 +425,7 @@
       <summary><i class="ti ti-history h"></i> 변경 이력 보기 <span class="cnt"><i class="ti ti-point-filled" style="font-size:8px;color:var(--gold)"></i> 최근 7. 10</span> <i class="ti ti-chevron-down chev"></i></summary>
       <div class="clogbody">
         <div class="chgday open"><div class="chghd" onclick="toggleDay(this)">2026. 7. 10 <span class="chgnew">최신</span></div><div class="cbody">
+          <div class="chgi"><b>[신규]</b> <b>평일 예식도 표시</b> — 지금까진 주말(토·일)만 인원이 나왔지만, 이제 <b>평일 예식</b>도 인원·건수가 표시됩니다 <em>(이번 주: 수서 <b>금 7/17 · 3건 530명</b>)</em></div>
           <div class="chgi"><b>[포털 새단장]</b> PC 화면 <b>와이드 3단</b>·모바일 반응형 개편 — 엑셀 받기가 <b>맨 위</b>로</div>
           <div class="chgi"><b>[신규]</b> 오늘 날씨 · <b>식중독 지수</b>(실시간) + 단계별 위생 실천수칙</div>
           <div class="chgi"><b>[신규]</b> <b>이번 달 식자재 시세 가이드</b> — 지금 저렴한 제철 vs 오름세 품목, 매월 자동 갱신</div>
