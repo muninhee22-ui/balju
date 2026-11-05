@@ -223,6 +223,81 @@
   .foot{text-align:center;font-size:11px;color:var(--mut);padding:6px 0 10px;font-weight:600;line-height:1.7;}
   .foot b{color:var(--sub);}
 
+  /* ===== 2027 물가 전망 · 식대 반영률 ===== */
+  .fx .lead{font-size:13px;color:#3b4457;font-weight:600;line-height:1.55;background:#faf6ec;border:1px solid #efe4c8;
+    border-left:4px solid var(--gold);border-radius:0 11px 11px 0;padding:11px 14px;margin-bottom:13px;}
+  .fx .lead b{color:var(--ink);font-weight:800;}
+  .fx .lead .bad{color:#c0262f;} .fx .lead .ok{color:#0d7c47;}
+  .fx-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-bottom:14px;}
+  .fx-k{background:#f5f7fc;border:1px solid #e9edf6;border-radius:12px;padding:11px 12px;min-width:0;}
+  .fx-k .l{font-size:11px;color:var(--sub);font-weight:800;}
+  .fx-k .v{font-size:22px;font-weight:900;color:var(--ink);line-height:1.15;margin-top:4px;}
+  .fx-k .v small{font-size:11.5px;color:#8590a4;font-weight:700;margin-left:2px;}
+  .fx-k .s{font-size:10.5px;color:var(--mut);font-weight:600;margin-top:4px;line-height:1.45;}
+  .fx-k.hl{background:linear-gradient(135deg,#1d2646,#161d33);border-color:#1d2646;}
+  .fx-k.hl .l{color:var(--gold2);} .fx-k.hl .v{color:#fff;} .fx-k.hl .v small{color:#cdd5e6;} .fx-k.hl .s{color:#a7b2ca;}
+  .fx-sub{font-size:13px;font-weight:900;color:var(--ink);margin:16px 2px 9px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  .fx-sub i{color:var(--gold);font-size:16px;}
+  .fx-sub em{font-style:normal;font-size:11px;color:var(--mut);font-weight:700;}
+  .fx-drv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .fx-d{background:#f7f9fd;border:1px solid #eaeef6;border-radius:11px;padding:10px 12px;font-size:12px;color:#3b4457;font-weight:600;line-height:1.5;}
+  .fx-d .t{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:900;color:var(--ink);margin-bottom:4px;}
+  .fx-d .t .ar{margin-left:auto;font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:9px;white-space:nowrap;}
+  .fx-d .t .ar.up{background:#fdecec;color:#c0262f;} .fx-d .t .ar.mx{background:var(--chgbg);color:#b7690a;}
+  .fx-d b{color:var(--ink);font-weight:800;}
+  .fx-tbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .fx-tbl th,.fx-tbl td{padding:7px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
+  .fx-tbl th:first-child,.fx-tbl td:first-child{text-align:left;color:var(--sub);font-weight:700;white-space:normal;}
+  .fx-tbl thead th{font-size:11.5px;color:var(--sub);font-weight:800;background:#f5f7fc;}
+  .fx-tbl thead th.base{color:var(--ink);background:var(--goldsoft);}
+  .fx-tbl td{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .fx-tbl td.base{background:#fffaf0;font-weight:900;}
+  .fx-tbl tr.sum td{border-top:2px solid #d9cfb4;font-weight:900;}
+  .fx-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;}
+  .fx-tbl th:first-child{width:40%;}
+  @media(max-width:759px){
+    .fx-tbl{font-size:11.5px;}
+    .fx-tbl th,.fx-tbl td{padding:6px 6px;}
+    .fx-tbl th:first-child,.fx-tbl td:first-child{min-width:96px;width:auto;}
+    .fx-tbl td{white-space:normal;word-break:keep-all;}
+  }
+  /* 지점별 표 (PC=표, 모바일=카드) */
+  .fxb{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .fxb-r{display:grid;grid-template-columns:74px 1.05fr 1.05fr .8fr 1.35fr 1.15fr .95fr;align-items:center;border-top:1px solid var(--line);}
+  .fxb-r:first-child{border-top:none;}
+  .fxb-r>div{padding:9px 9px;font-size:12.5px;font-weight:700;color:var(--ink);min-width:0;font-variant-numeric:tabular-nums;}
+  .fxb-r.h{background:#f5f7fc;}
+  .fxb-r.h>div{font-size:11px;color:var(--sub);font-weight:800;line-height:1.35;}
+  .fxb-r.sum{background:#fffaf0;border-top:2px solid #d9cfb4;}
+  .fxb-r .nm{font-size:14px;font-weight:900;}
+  .fxb-r .m{font-size:14px;font-weight:800;}
+  .fxb-r .x{display:block;font-size:10.5px;color:var(--mut);font-weight:700;margin-top:1px;}
+  .fxb-r .up{color:#0d7c47;} .fxb-r .dn{color:#c0262f;}
+  .meter{position:relative;height:8px;border-radius:4px;background:#eceff5;margin-top:5px;}
+  .meter i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;}
+  .meter::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:var(--ink);opacity:.55;}
+  .meter.g i{background:var(--new);} .meter.y i{background:var(--chg);} .meter.r i{background:#d8323f;}
+  .st{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:800;padding:2px 8px;border-radius:9px;white-space:nowrap;}
+  .st.g{background:var(--newbg);color:#0d7c47;} .st.y{background:var(--chgbg);color:#b7690a;} .st.r{background:#fdecec;color:#c0262f;}
+  .fx-note{margin-top:12px;font-size:11px;color:#6b7489;font-weight:600;line-height:1.65;background:#f7f9fd;border:1px solid #eaeef6;border-radius:11px;padding:10px 13px;}
+  .fx-note b{color:var(--ink);font-weight:800;}
+  .fx-note ul{margin:0;padding-left:16px;} .fx-note li{margin-top:3px;}
+  .fx-src{margin-top:8px;font-size:10.5px;color:var(--mut);font-weight:600;line-height:1.7;}
+  .fx-src a{color:var(--suseo);text-decoration:underline;text-underline-offset:2px;}
+  @media(max-width:1099px){.fx-kpis{grid-template-columns:repeat(3,1fr);} .fx-drv{grid-template-columns:1fr 1fr;}}
+  @media(max-width:759px){
+    .fx-kpis{grid-template-columns:1fr 1fr;} .fx-kpis .fx-k.hl{grid-column:1/-1;}
+    .fx-drv{grid-template-columns:1fr;}
+    .fxb{border:none;border-radius:0;overflow:visible;display:flex;flex-direction:column;gap:9px;}
+    .fxb-r.h{display:none;}
+    .fxb-r{grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;background:#fff;}
+    .fxb-r.sum{border-top:1px solid #d9cfb4;}
+    .fxb-r>div{padding:7px 11px;}
+    .fxb-r>div:first-child{grid-column:1/-1;background:#f5f7fc;border-radius:12px 12px 0 0;}
+    .fxb-r.sum>div:first-child{background:#faf3df;}
+    .fxb-r>div[data-l]::before{content:attr(data-l);display:block;font-size:10.5px;color:var(--mut);font-weight:800;margin-bottom:2px;}
+  }
+
   /* ===== RESPONSIVE ===== */
   @media(min-width:760px){
     .branchgrid .bc:hover{transform:translateY(-3px);}
@@ -406,6 +481,154 @@
     </div>
     <div class="seasonnote" id="seasonnote"></div>
     <div class="seasonfoot">※ 계절 평균 시세 기준 가이드 — 실제 발주 단가는 <b>발주서(ERP)</b>를 따르세요. 매월 자동 갱신.</div>
+    </div>
+  </section>
+
+  <!-- 2027 물가 전망 · 지점별 식대 반영률 -->
+  <section class="card fx">
+    <div class="sec-h"><i class="ti ti-chart-line"></i> 2027 물가 전망 · 지점별 식대 반영률 <span class="tag">예약부 식대 기준 · 부가세 포함/제외 · 26.11.5 작성</span></div>
+
+    <div class="lead">
+      27년 식대에 반영해야 할 물가는 <b>3.5%</b>(안정 2.7% ~ 위험 4.9%)로 봅니다. 조리부 식자재(3.4%)만 본 값이 아니라 <b>인건비·에너지·운영비까지 합친 식대 종합물가</b>입니다.
+      지금까지 받은 27년 예약을 보면 <b class="ok">안산·안양·청담은 +7%대로 충분히 반영</b>됐고, <b class="bad">수서는 +2.0%로 부족</b>(소비자물가 2.5%보다도 낮음), <b class="bad">논현은 −6.3%로 오히려 내려갔습니다</b>.
+    </div>
+
+    <div class="fx-kpis">
+      <div class="fx-k"><div class="l">소비자물가 (전체)</div><div class="v">2.5<small>%</small></div><div class="s">범위 2.0~3.2% · 한은 2.3 · KDI 2.2<br>26년 10월 실적 2.8%</div></div>
+      <div class="fx-k"><div class="l">외식물가</div><div class="v">3.0<small>%</small></div><div class="s">26년 10월 2.9% · 가공식품 2.9%<br>예식장 식대 서울 +3.9%·경기 +3.3%</div></div>
+      <div class="fx-k hl"><div class="l">★ 식대 종합물가 (반영 기준)</div><div class="v">3.5<small>%</small></div><div class="s">식자재 3.4 · 인건비 4.0 · 에너지 4.5<br>음료·주류 3.0 · 운영비 2.5 가중</div></div>
+      <div class="fx-k"><div class="l">원/달러 환율</div><div class="v">1,341<small>원</small></div><div class="s">11/4 종가 · 27년 기준 1,320~1,380<br>위험 1,450원 이상</div></div>
+      <div class="fx-k"><div class="l">기준금리</div><div class="v">3.00<small>%</small></div><div class="s">한은(7·8월 인상 후 동결)<br>미 연준 3.75~4.00% · 둘 다 추가 인상 가능</div></div>
+    </div>
+
+    <div class="fx-sub"><i class="ti ti-arrows-up-down"></i> 영향 요인 <em>달러 · 트럼프 · 수입물가 · 금리 · 유가 · 인건비</em></div>
+    <div class="fx-drv">
+      <div class="fx-d"><div class="t"><i class="ti ti-currency-dollar"></i> 달러 강세(환율↑) 가능성 <span class="ar up">물가↑</span></div>
+        연준 9월 인상·<b>12월 추가 인상 유력</b> → 27년 초 달러 강세 위험. 기관 전망은 27년 <b>1,280~1,370원</b>, 1,450원 이상 재상승 가능성은 <b>약 20%</b>(판단). 환율 10% 오르면 수입 식자재 원가 약 +5~7%(추정).</div>
+      <div class="fx-d"><div class="t"><i class="ti ti-flag"></i> 트럼프 영향 <span class="ar mx">양방향</span></div>
+        상호관세가 301조 관세로 바뀜(한국 <b>최소 12.5%</b>) + 과잉생산 관세 추가 가능 → 수출 둔화·원화 약세 압력. 금리 인하 압박은 달러 약세 요인. 미국 소고기 공급 2019년 이후 최저 → <b>미국산 소고기 1년 새 +31%</b>(26년 1월).</div>
+      <div class="fx-d"><div class="t"><i class="ti ti-ship"></i> 수입물가 <span class="ar up">물가↑</span></div>
+        9월 수입물가 <b>+1.7%</b>(4개월 만에 반등) — 환율이 3.4% 내렸는데도 두바이유 +28%가 더 컸음. 호주산 척아이롤 +28%, 수입 농축수산물 단가 +8.5%.</div>
+      <div class="fx-d"><div class="t"><i class="ti ti-building-bank"></i> 금리 인상 <span class="ar mx">양방향</span></div>
+        한은 7·8월 인상 → <b>3.00%</b>, 11월 추가 인상 가능. 금리↑는 환율 안정·27년 하반기 물가 둔화 요인이지만, 결혼 비용 부담이 커져 <b>보증인원 하향·식대 저항</b>이 생길 수 있음.</div>
+      <div class="fx-d"><div class="t"><i class="ti ti-gas-station"></i> 유가 · 공공요금 <span class="ar up">물가↑</span></div>
+        두바이유 9월 122$ → 11/2 102$. 석유 최고가격제가 10월 물가를 <b>0.8%p 눌러둔 상태</b>(없었으면 3.6%) → 해제·가스·전기요금 인상 시 상방. 한은: 중동 장기화 시 27년 물가 +0.4%p.</div>
+      <div class="fx-d"><div class="t"><i class="ti ti-users"></i> 인건비 <span class="ar up">물가↑</span></div>
+        27년 최저임금 <b>10,700원(+3.7%)</b> 확정 → 조리·연회 일용직, 협력업체 단가가 함께 오름.</div>
+    </div>
+
+    <div class="fx-sub"><i class="ti ti-adjustments-horizontal"></i> 27년 시나리오 <em>가능성은 자체 판단</em></div>
+    <div class="fx-wrap">
+      <table class="fx-tbl">
+        <thead><tr><th>구분</th><th>안정</th><th class="base">기준</th><th>위험</th></tr></thead>
+        <tbody>
+          <tr><td>가능성</td><td>25%</td><td class="base">55%</td><td>20%</td></tr>
+          <tr><td>원/달러 (27년 평균)</td><td>1,250~1,300</td><td class="base">1,320~1,380</td><td>1,450↑</td></tr>
+          <tr><td>두바이유 ($/배럴)</td><td>70~75</td><td class="base">80~90</td><td>100↑</td></tr>
+          <tr><td>소비자물가</td><td>2.0%</td><td class="base">2.5%</td><td>3.2%</td></tr>
+          <tr><td>외식물가</td><td>2.5%</td><td class="base">3.0%</td><td>3.8%</td></tr>
+          <tr><td>식자재 (조리부)</td><td>2.2%</td><td class="base">3.4%</td><td>5.7%</td></tr>
+          <tr><td>인건비</td><td>3.7%</td><td class="base">4.0%</td><td>4.5%</td></tr>
+          <tr><td>에너지 · 공공요금</td><td>2.5%</td><td class="base">4.5%</td><td>7.0%</td></tr>
+          <tr class="sum"><td>★ 식대 종합물가 = 권장 인상률</td><td>2.7%</td><td class="base">3.5%</td><td>4.9%</td></tr>
+          <tr><td>5개 지점 권장 식대 · 부가세 포함<br><small style="color:var(--mut)">26년 70,083원 기준</small></td><td>71,900원</td><td class="base">72,500원</td><td>73,500원</td></tr>
+          <tr><td>　〃 · 부가세 제외</td><td>65,400원</td><td class="base">66,000원</td><td>66,900원</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fx-sub"><i class="ti ti-building-store"></i> 지점별 26년 → 27년 식대 · 반영률 <em>위 큰 숫자 = 부가세 포함(예약부) · 아래 회색 = 부가세 제외 · 같은 달(6~12월) 비교</em></div>
+    <div class="fxb">
+      <div class="fxb-r h"><div>지점</div><div>26년 식대<br>(6~12월)</div><div>27년 받은 예약<br>(6~12월)</div><div>인상률</div><div>반영률<br>(가운데 선 = 100%)</div><div>27년 권장 식대<br>(기준 3.5% · 위험 4.9%)</div><div>1인 사입 여유<br>(부가세 제외)</div></div>
+
+      <div class="fxb-r" title="안산 반영률 200% = 인상률 +7.0% ÷ 종합물가 3.5%">
+        <div><span class="nm" style="color:var(--ansan)">안산</span> <span class="st g"><i class="ti ti-circle-check"></i>충분</span></div>
+        <div data-l="26년 식대 (6~12월)"><span class="m">59,256원</span><span class="x">제외 53,869원</span></div>
+        <div data-l="27년 받은 예약 (6~12월)"><span class="m">63,415원</span><span class="x">제외 57,650원</span></div>
+        <div data-l="인상률"><span class="m up">+7.0%</span><span class="x">1~12월 +4.4%</span></div>
+        <div data-l="반영률"><span class="m">200%</span><div class="meter g"><i style="width:100%"></i></div></div>
+        <div data-l="27년 권장 식대"><span class="m">61,300원</span><span class="x">제외 55,800 · 위험 62,200</span></div>
+        <div data-l="1인 사입 여유"><span class="m up">+500원</span><span class="x">사입 목표 25.9%</span></div>
+      </div>
+
+      <div class="fxb-r" title="안양 반영률 213% = 인상률 +7.5% ÷ 종합물가 3.5%">
+        <div><span class="nm" style="color:var(--anyang)">안양</span> <span class="st g"><i class="ti ti-circle-check"></i>충분</span></div>
+        <div data-l="26년 식대 (6~12월)"><span class="m">65,307원</span><span class="x">제외 59,370원</span></div>
+        <div data-l="27년 받은 예약 (6~12월)"><span class="m">70,197원</span><span class="x">제외 63,816원</span></div>
+        <div data-l="인상률"><span class="m up">+7.5%</span><span class="x">1~12월 +4.3%</span></div>
+        <div data-l="반영률"><span class="m">213%</span><div class="meter g"><i style="width:100%"></i></div></div>
+        <div data-l="27년 권장 식대"><span class="m">67,600원</span><span class="x">제외 61,500 · 위험 68,500</span></div>
+        <div data-l="1인 사입 여유"><span class="m up">+630원</span><span class="x">사입 목표 26.0%</span></div>
+      </div>
+
+      <div class="fxb-r" title="수서 반영률 58% = 인상률 +2.0% ÷ 종합물가 3.5%">
+        <div><span class="nm" style="color:var(--suseo)">수서</span> <span class="st y"><i class="ti ti-alert-triangle"></i>부족</span></div>
+        <div data-l="26년 식대 (6~12월)"><span class="m">80,981원</span><span class="x">제외 73,619원</span></div>
+        <div data-l="27년 받은 예약 (6~12월)"><span class="m">82,618원</span><span class="x">제외 75,108원</span></div>
+        <div data-l="인상률"><span class="m">+2.0%</span><span class="x">1~12월 +0.7%</span></div>
+        <div data-l="반영률"><span class="m">58%</span><div class="meter y"><i style="width:29%"></i></div></div>
+        <div data-l="27년 권장 식대"><span class="m">83,800원</span><span class="x">제외 76,200 · 위험 85,000</span></div>
+        <div data-l="1인 사입 여유"><span class="m dn">−260원</span><span class="x">사입 목표 24.85%</span></div>
+      </div>
+
+      <div class="fxb-r" title="청담 반영률 203% = 인상률 +7.1% ÷ 종합물가 3.5%">
+        <div><span class="nm" style="color:var(--cheongdam)">청담</span> <span class="st g"><i class="ti ti-circle-check"></i>충분</span></div>
+        <div data-l="26년 식대 (6~12월)"><span class="m">97,297원</span><span class="x">제외 88,451원</span></div>
+        <div data-l="27년 받은 예약 (6~12월)"><span class="m">104,234원</span><span class="x">제외 94,758원</span></div>
+        <div data-l="인상률"><span class="m up">+7.1%</span><span class="x">1~12월 +5.3%</span></div>
+        <div data-l="반영률"><span class="m">203%</span><div class="meter g"><i style="width:100%"></i></div></div>
+        <div data-l="27년 권장 식대"><span class="m">100,700원</span><span class="x">제외 91,600 · 위험 102,100</span></div>
+        <div data-l="1인 사입 여유"><span class="m up">+680원</span><span class="x">사입 목표 20.86%</span></div>
+      </div>
+
+      <div class="fxb-r" title="논현 반영률 −180% = 인상률 −6.3% ÷ 종합물가 3.5% (식대가 내려감)">
+        <div><span class="nm" style="color:var(--nonhyeon)">논현</span> <span class="st r"><i class="ti ti-arrow-down-right"></i>역행</span></div>
+        <div data-l="26년 식대 (6~12월)"><span class="m">76,584원</span><span class="x">제외 69,622원</span></div>
+        <div data-l="27년 받은 예약 (6~12월)"><span class="m">71,730원</span><span class="x">제외 65,209원</span></div>
+        <div data-l="인상률"><span class="m dn">−6.3%</span><span class="x">1~12월 −6.0%</span></div>
+        <div data-l="반영률"><span class="m dn">−180%</span><div class="meter r"><i style="width:0%"></i></div></div>
+        <div data-l="27년 권장 식대"><span class="m">79,300원</span><span class="x">제외 72,100 · 위험 80,400</span></div>
+        <div data-l="1인 사입 여유"><span class="m dn">−1,770원</span><span class="x">사입 목표 26.0%</span></div>
+      </div>
+
+      <div class="fxb-r sum" title="5개 지점 반영률 166% = 인상률 +5.8% ÷ 종합물가 3.5%">
+        <div><span class="nm">5개 지점</span> <span class="st g"><i class="ti ti-circle-check"></i>평균 충분</span></div>
+        <div data-l="26년 식대 (6~12월)"><span class="m">70,083원</span><span class="x">제외 63,712원</span></div>
+        <div data-l="27년 받은 예약 (6~12월)"><span class="m">74,161원</span><span class="x">제외 67,420원</span></div>
+        <div data-l="인상률"><span class="m up">+5.8%</span><span class="x">1~12월 +3.3%</span></div>
+        <div data-l="반영률"><span class="m">166%</span><div class="meter g"><i style="width:83%"></i></div></div>
+        <div data-l="27년 권장 식대"><span class="m">72,500원</span><span class="x">제외 66,000 · 위험 73,500</span></div>
+        <div data-l="1인 사입 여유"><span class="m">—</span><span class="x">지점별 확인</span></div>
+      </div>
+    </div>
+
+    <div class="fx-note">
+      <ul>
+        <li><b>반영률</b> = 27년 받은 예약 식대 인상률 ÷ 식대 종합물가(3.5%) × 100 — <b>100% 이상</b> 물가 이상 반영(원가율 유지·개선) · <b>50~100%</b> 부족 · <b>50% 미만·마이너스</b> 미반영·역행.</li>
+        <li><b>식대 종합물가</b> = 식자재 40% · 인건비(조리+연회 서비스) 30% · 에너지·공공요금 8% · 음료·주류 6% · 기타 운영비 16% 가중 — 조리부 물가만이 아니라 회사 전체 원가 기준입니다. <em style="font-style:normal">가중치는 가정치이며, 경영지원부 실적이 나오면 바꿉니다.</em></li>
+        <li><b>식대 = 예약부 기준</b>: 계약서 대인식대(식음료 ÷ 보증인원 가중평균, 계약서에 "연회 음·주류 부가세 포함"으로 표기). <b>부가세 제외 = ÷1.1</b>로, 코스트 보고서의 조리부 환산과 같은 방식입니다. 원천: 웨딩프로 계약서 → 구글캘린더 [월정산].</li>
+        <li><b>기간</b>: 26년 = 6~12월(1~5월은 [월정산] 미집계), 27년 = 지금까지 받은 예약 중 같은 달(6~12월)만 비교합니다. 예약이 계속 들어오므로 숫자는 바뀝니다. 1~12월 전체 인상률은 작은 글씨로 참고만 하세요.</li>
+        <li><b>1인 사입 여유</b> = 27년 예약 식대(부가세 제외) × 지점 사입 목표율 − 26년 메뉴를 27년에 그대로 낼 때 원가(식자재 +3.4%). 마이너스면 같은 메뉴로는 사입 목표를 넘습니다. 수서 −260원, 논현 −1,770원.</li>
+        <li><b>권장 식대</b> = 26년 식대 × (1 + 종합물가). 신규 계약 하한선으로 쓰세요. 논현은 할인·프로모션 계약 비중 확인이 먼저입니다.</li>
+        <li>전망치는 공개된 기관 전망을 바탕으로 한 <b>자체 추정</b>이며 확정치가 아닙니다. 한은 11월 경제전망이 나오면 갱신합니다.</li>
+      </ul>
+    </div>
+    <div class="fx-src">출처 —
+      <a href="https://www.bok.or.kr/portal/bbs/B0000502/view.do?nttId=11064211&amp;menuNo=200690" target="_blank" rel="noopener">한국은행 경제전망(26.8)</a> ·
+      <a href="https://www.korea.kr/briefing/policyBriefingView.do?newsId=156774833" target="_blank" rel="noopener">KDI 수정전망(26.8)</a> ·
+      <a href="https://www.seoul.co.kr/news/economy/2026/11/03/20261103500016" target="_blank" rel="noopener">10월 소비자물가</a> ·
+      <a href="https://www.fnnews.com/news/202611041536386810" target="_blank" rel="noopener">11/4 환율</a> ·
+      <a href="https://www.mt.co.kr/index.php/economy/2026/11/04/2026110415565250066" target="_blank" rel="noopener">연말 환율 전망</a> ·
+      <a href="https://www.businesspost.co.kr/BP?command=article_view&amp;num=448635" target="_blank" rel="noopener">iM증권 27년 환율</a> ·
+      <a href="https://www.fntimes.com/html/view.php?ud=202610221201381124179ad43907_18" target="_blank" rel="noopener">한은 10월 금통위</a> ·
+      <a href="https://www.g-enews.com/article/Global-Biz/2026/10/202610210023311343fda4f5ab74_1" target="_blank" rel="noopener">연준 12월 인상 전망</a> ·
+      <a href="https://biz.newdaily.co.kr/site/data/html/2026/10/15/2026101500337.amp.html" target="_blank" rel="noopener">9월 수입물가</a> ·
+      <a href="https://www.fnnews.com/news/202607240759518955" target="_blank" rel="noopener">미국 301조 관세</a> ·
+      <a href="https://www.heraldk.com/article/2026062819100081536" target="_blank" rel="noopener">수입 소고기</a> ·
+      <a href="https://www.thepowernews.co.kr/view.php?ud=202611041748411636de3f0aa1be_7" target="_blank" rel="noopener">두바이유</a> ·
+      <a href="https://v.daum.net/v/20260715085108633" target="_blank" rel="noopener">27년 최저임금</a> ·
+      <a href="https://www.fnnews.com/news/202610120606031746" target="_blank" rel="noopener">예식장 식대(소비자원)</a> ·
+      내부: 웨딩프로 계약서·구글캘린더 [월정산]·코스트종합보고서(26.8.30)
     </div>
   </section>
 
